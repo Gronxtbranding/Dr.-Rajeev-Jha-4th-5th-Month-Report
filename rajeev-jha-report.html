@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LinkedIn Performance Report — Month 4 &amp; 5 | Dr. Rajeev Jha</title>
+<meta name="description" content="LinkedIn Performance Report, Months 4 &amp; 5, prepared by the GroNXT team for Dr. Rajeev Jha — reach, engagement, network growth and outreach reconciliation." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+/* Chart.js loader: tries three independent CDNs in sequence. Corporate
+   networks, ad-blockers and browser extensions commonly block one CDN
+   (cdnjs.cloudflare.com especially) while allowing others — trying
+   several makes chart loading resilient instead of an all-or-nothing bet. */
+(function(){
+  var sources = [
+    'https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js',
+    'https://unpkg.com/chart.js@4.4.4/dist/chart.umd.min.js'
+  ];
+  var i = 0;
+  function ready(){ window.dispatchEvent(new Event('chartjs-ready')); }
+  function tryNext(){
+    if (i >= sources.length){ ready(); return; }
+    var s = document.createElement('script');
+    s.src = sources[i++];
+    s.onload = ready;
+    s.onerror = tryNext;
+    document.head.appendChild(s);
+  }
+  tryNext();
+})();
+</script>
+<style>
+  :root{
+    --ink: #101828;
+    --ink-soft: #2b3344;
+    --paper: #FAF8F3;
+    --paper-dim: #F0ECE1;
+    --card: #FFFFFF;
+    --line: #E4DFD2;
+    --line-dark: #2A3245;
+    --gold: #B8892F;
+    --gold-soft: #E7CE9C;
+    --teal: #1F6F63;
+    --teal-light: #4C9C8D;
+    --brick: #A85239;
+    --muted: #6B7280;
+    --radius-s: 3px;
+    --radius-m: 6px;
+    --maxw: 1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter', -apple-system, sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:600;
+    margin:0;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  p{ margin:0; line-height:1.6; }
+  a{ color:inherit; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 32px; }
+  ::selection{ background:var(--gold-soft); }
+
+  .shell{ display:grid; grid-template-columns:220px 1fr; }
+  @media (max-width:980px){ .shell{ grid-template-columns:1fr; } }
+
+  .rail{
+    position:sticky; top:0; align-self:start; height:100vh;
+    background:var(--ink); color:#cdd3de;
+    padding:28px 20px; display:flex; flex-direction:column; gap:24px;
+    border-right:1px solid var(--line-dark);
+  }
+  @media (max-width:980px){
+    .rail{ position:sticky; height:auto; flex-direction:row; align-items:center;
+      overflow-x:auto; padding:14px 16px; gap:18px; z-index:40; top:0; }
+  }
+  .rail-brand{ font-family:'Fraunces',serif; font-size:15px; color:#fff; line-height:1.3; flex:none; }
+  .rail-brand small{ display:block; font-family:'Inter',sans-serif; font-size:11px; color:#8993A6; font-weight:500; margin-top:2px; }
+  .rail-nav{ display:flex; flex-direction:column; gap:1px; flex:1; }
+  @media (max-width:980px){ .rail-nav{ flex-direction:row; gap:4px; } }
+  .rail-nav a{
+    text-decoration:none; color:#9aa3b5; font-size:12.5px; font-weight:500;
+    padding:8px 10px; border-radius:var(--radius-s); white-space:nowrap;
+    border-left:2px solid transparent; transition:color .15s ease, background .15s ease, border-color .15s ease;
+  }
+  @media (max-width:980px){ .rail-nav a{ border-left:none; border-bottom:2px solid transparent; } }
+  .rail-nav a:hover{ color:#fff; }
+  .rail-nav a.active{ color:#fff; background:rgba(255,255,255,0.06); border-left-color:var(--gold); }
+  @media (max-width:980px){ .rail-nav a.active{ border-left-color:transparent; border-bottom-color:var(--gold); } }
+  .rail-foot{ font-size:11px; color:#6b7488; flex:none; }
+  @media (max-width:980px){ .rail-foot{ display:none; } }
+
+  main{ min-width:0; }
+
+  .hero{
+    background:var(--ink); color:#EDEFF3;
+    padding:64px 0 48px;
+    background-image: radial-gradient(circle at 88% 12%, rgba(184,137,47,0.14), transparent 45%);
+    border-bottom:1px solid var(--line-dark);
+  }
+  .hero-kicker{ font-size:13px; color:var(--gold-soft); font-weight:600; margin-bottom:14px; }
+  .hero h1{ font-size:clamp(30px,4vw,44px); color:#fff; max-width:16ch; line-height:1.08; }
+  .hero-sub{ margin-top:18px; max-width:62ch; font-size:16px; color:#B7BECE; line-height:1.65; }
+  .hero-meta{ display:flex; gap:28px; margin-top:26px; flex-wrap:wrap; font-size:13px; color:#8993A6; }
+  .hero-meta b{ color:#EDEFF3; font-weight:600; }
+
+  .kpi-strip{ margin-top:40px; display:grid; grid-template-columns:repeat(5,1fr); border-top:1px solid var(--line-dark); }
+  @media (max-width:900px){ .kpi-strip{ grid-template-columns:repeat(2,1fr); } }
+  .kpi{ padding:22px 20px 6px 0; border-right:1px solid var(--line-dark); }
+  .kpi:last-child{ border-right:none; }
+  @media (max-width:900px){ .kpi{ border-right:1px solid var(--line-dark); padding:18px 14px; } .kpi:nth-child(2n){ border-right:none; } }
+  .kpi-num{ font-family:'Fraunces',serif; font-size:34px; color:#fff; font-weight:600; line-height:1; }
+  .kpi-num span{ font-size:17px; color:var(--gold-soft); font-weight:500; margin-left:2px; }
+  .kpi-label{ margin-top:8px; font-size:12.5px; color:#9aa3b5; line-height:1.4; }
+  .kpi{ position:relative; cursor:default; }
+  .info-dot{
+    display:inline-flex; align-items:center; justify-content:center; width:14px; height:14px;
+    border-radius:50%; border:1px solid #6b7488; color:#9aa3b5; font-size:9.5px; font-style:normal;
+    font-family:'Inter',sans-serif; vertical-align:middle; margin-left:3px;
+  }
+  .kpi .tip{
+    visibility:hidden; opacity:0; position:absolute; left:0; top:calc(100% + 10px);
+    background:#1B1F27; color:#EDEFF3; font-size:12px; line-height:1.55; font-weight:400;
+    padding:12px 14px; border-radius:8px; width:240px; z-index:30; pointer-events:none;
+    box-shadow:0 12px 32px rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.08);
+    transition:opacity .15s ease, visibility .15s ease;
+  }
+  .kpi:hover .tip, .kpi:focus .tip, .kpi:focus-within .tip{ visibility:visible; opacity:1; }
+  @media (max-width:900px){ .kpi .tip{ width:200px; } }
+
+  .hero-brand{ margin-bottom:16px; }
+  .hero-logo{ height:34px; width:auto; display:block; }
+
+  section{ padding:56px 0; border-bottom:1px solid var(--line); }
+  section:last-of-type{ border-bottom:none; }
+  .section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:28px; flex-wrap:wrap; }
+  .section-head h2{ font-size:26px; }
+  .section-num{ font-family:'Fraunces',serif; font-size:13px; color:var(--gold); font-weight:600; margin-bottom:6px; }
+  .section-intro{ max-width:70ch; color:var(--ink-soft); font-size:15px; margin-bottom:6px; }
+  .section-intro + .section-intro{ margin-top:10px; }
+
+  .grid-2{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:28px; align-items:start; }
+  @media (max-width:900px){ .grid-2{ grid-template-columns:1fr; } }
+  .grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  @media (max-width:900px){ .grid-3{ grid-template-columns:1fr; } }
+  .grid-5{ display:grid; grid-template-columns:repeat(5,1fr); gap:14px; }
+  @media (max-width:900px){ .grid-5{ grid-template-columns:repeat(2,1fr); } }
+
+  .card{ background:var(--card); border:1px solid var(--line); border-radius:var(--radius-m); padding:22px; }
+  .card-title{ font-size:13px; font-weight:700; color:var(--ink); margin-bottom:4px; }
+  .card-sub{ font-size:12.5px; color:var(--muted); margin-bottom:14px; }
+
+  ul.bullets{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:16px; }
+  ul.bullets li{ padding-left:20px; position:relative; font-size:14.5px; color:var(--ink-soft); line-height:1.6; }
+  ul.bullets li::before{ content:""; position:absolute; left:0; top:8px; width:7px; height:7px; background:var(--teal); border-radius:50%; }
+  ul.bullets li b{ color:var(--ink); }
+
+  .stat-mini-row{ display:flex; gap:22px; flex-wrap:wrap; margin-top:20px; }
+  .stat-mini{ min-width:110px; }
+  .stat-mini .n{ font-family:'Fraunces',serif; font-size:22px; font-weight:600; color:var(--teal); }
+  .stat-mini .l{ font-size:11.5px; color:var(--muted); margin-top:2px; }
+
+  .stat-card{ background:var(--card); border:1px solid var(--line); border-radius:var(--radius-m); padding:16px 18px; }
+  .stat-card .n{ font-family:'Fraunces',serif; font-size:26px; font-weight:600; color:var(--ink); }
+  .stat-card .n.teal{ color:var(--teal); }
+  .stat-card .n.gold{ color:var(--gold); }
+  .stat-card .l{ font-size:12px; color:var(--muted); margin-top:4px; line-height:1.4; }
+  .metrics-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:14px; margin-top:26px; }
+
+  .donut-wrap{ position:relative; display:flex; flex-direction:column; align-items:center; }
+  .donut-center{ position:absolute; top:50%; left:50%; transform:translate(-50%,-58%); text-align:center; }
+  .donut-center .n{ font-family:'Fraunces',serif; font-size:26px; font-weight:600; }
+  .donut-center .l{ font-size:10.5px; color:var(--muted); }
+  .legend-row{ display:flex; gap:18px; margin-top:14px; font-size:12.5px; }
+  .legend-dot{ display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; }
+
+  .tabbar{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:20px; }
+  .tabbar button{
+    font-family:'Inter',sans-serif; font-size:13px; font-weight:600; color:var(--ink-soft);
+    background:var(--paper-dim); border:1px solid var(--line); padding:8px 16px; border-radius:20px; cursor:pointer;
+    transition:all .15s ease;
+  }
+  .tabbar button.active{ background:var(--ink); color:#fff; border-color:var(--ink); }
+  .tabbar button:hover:not(.active){ border-color:var(--teal); color:var(--teal); }
+
+  table{ width:100%; border-collapse:collapse; font-size:13.5px; }
+  thead th{ text-align:left; font-size:11.5px; text-transform:uppercase; letter-spacing:0.04em; color:var(--muted); font-weight:600; padding:0 10px 10px; border-bottom:1px solid var(--line); }
+  tbody td{ padding:12px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tbody tr:last-child td{ border-bottom:none; }
+  .badge{ display:inline-block; font-size:11px; font-weight:700; padding:3px 9px; border-radius:20px; background:var(--teal); color:#fff; }
+  .badge.gold{ background:var(--gold); }
+  .badge.low{ background:#EDE7D8; color:var(--brick); }
+
+  .people-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+  @media (max-width:700px){ .people-grid{ grid-template-columns:1fr; } }
+  .person{ border:1px solid var(--line); border-radius:var(--radius-s); padding:12px 14px; background:var(--card); }
+  .person .name{ font-size:13.5px; font-weight:700; color:var(--ink); }
+  .person .role{ font-size:12px; color:var(--muted); margin-top:3px; line-height:1.4; }
+  .person .role .more{ color:var(--gold); font-weight:600; }
+
+  .demo-tabbar{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:6px; }
+  .funnel{ display:flex; flex-direction:column; gap:10px; margin-top:8px; }
+  .funnel-step{ display:grid; grid-template-columns:150px 1fr 70px; align-items:center; gap:14px; font-size:13px; }
+  .funnel-bar-bg{ background:var(--paper-dim); border-radius:20px; height:14px; overflow:hidden; }
+  .funnel-bar-fill{ height:100%; border-radius:20px; background:linear-gradient(90deg,var(--teal),var(--teal-light)); }
+  .funnel-step .val{ text-align:right; font-weight:700; color:var(--ink); }
+
+  .stacked-bar{ display:flex; height:34px; border-radius:6px; overflow:hidden; margin-top:6px; }
+  .stacked-seg{ display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:#fff; }
+
+  .chip-row{ display:flex; gap:8px; flex-wrap:wrap; }
+  .chip{ font-size:12px; padding:6px 12px; border-radius:20px; background:var(--paper-dim); border:1px solid var(--line); color:var(--ink-soft); }
+
+  .conv-cols{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  @media (max-width:700px){ .conv-cols{ grid-template-columns:1fr; } }
+  .conv-list{ list-style:none; margin:10px 0 0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  .conv-list li{ display:flex; justify-content:space-between; font-size:13.5px; padding:8px 12px; background:var(--paper-dim); border-radius:var(--radius-s); }
+  .conv-list li b{ font-weight:700; }
+  .conv-list.leaders li b{ color:var(--teal); }
+  .conv-list.laggards li b{ color:var(--brick); }
+
+  .pipeline-card{ border:1px solid var(--line); border-radius:var(--radius-m); padding:24px; background:var(--card); position:relative; overflow:hidden; }
+  .pipeline-card::before{ content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--gold); }
+  .pipeline-card .tag{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--gold); margin-bottom:10px; }
+  .pipeline-card h3{ font-size:18px; margin-bottom:8px; }
+  .pipeline-card p{ font-size:14px; color:var(--ink-soft); }
+
+  .roadmap-item{ display:grid; grid-template-columns:44px 1fr; gap:18px; padding:20px 0; border-bottom:1px solid var(--line); }
+  .roadmap-item:last-child{ border-bottom:none; }
+  .roadmap-num{ font-family:'Fraunces',serif; font-size:24px; color:var(--gold); font-weight:600; }
+  .roadmap-item h3{ font-size:16px; margin-bottom:6px; }
+  .roadmap-item p{ font-size:14px; color:var(--ink-soft); }
+
+  .search-row{ display:flex; gap:10px; margin-bottom:16px; flex-wrap:wrap; }
+  .search-row input{
+    flex:1; min-width:220px; font-family:'Inter'; font-size:13.5px; padding:10px 14px;
+    border:1px solid var(--line); border-radius:var(--radius-s); background:var(--paper-dim);
+  }
+  .search-row input:focus{ outline:none; border-color:var(--teal); background:#fff; }
+  .table-scroll{ max-height:460px; overflow-y:auto; border:1px solid var(--line); border-radius:var(--radius-m); }
+  .table-scroll table thead{ position:sticky; top:0; background:var(--card); z-index:2; }
+  .table-scroll table{ margin:0; }
+  .table-scroll thead th{ padding:12px 14px 12px; cursor:pointer; user-select:none; white-space:nowrap; }
+  .table-scroll thead th:hover{ color:var(--teal); }
+  .table-scroll thead th .arrow{ font-size:10px; margin-left:3px; opacity:0.5; }
+  .table-scroll tbody td{ padding:11px 14px; }
+  .table-scroll a.plink{ color:var(--teal); text-decoration:none; font-weight:600; font-size:12.5px; white-space:nowrap; }
+  .table-scroll a.plink:hover{ text-decoration:underline; }
+  .row-count{ font-size:12px; color:var(--muted); margin-top:8px; }
+
+  .mini-org-list{ list-style:none; margin:10px 0 0; padding:0; display:flex; flex-direction:column; gap:6px; }
+  .mini-org-list li{ display:flex; justify-content:space-between; font-size:13px; padding:8px 12px; border-radius:var(--radius-s); background:var(--paper-dim); }
+  .mini-org-list a{ color:var(--teal); text-decoration:none; font-weight:600; }
+  .mini-org-list a:hover{ text-decoration:underline; }
+  .mini-org-list .d{ color:var(--muted); font-size:11.5px; }
+
+  .log-details{ border:1px solid var(--line); border-radius:var(--radius-s); margin-bottom:8px; overflow:hidden; background:var(--card); }
+  .log-details summary{
+    cursor:pointer; list-style:none; padding:13px 16px; font-size:13.5px; font-weight:700;
+    display:flex; justify-content:space-between; align-items:center; background:var(--paper-dim);
+  }
+  .log-details summary::-webkit-details-marker{ display:none; }
+  .log-details summary .count{ font-weight:500; color:var(--muted); font-size:12px; }
+  .log-details summary::after{ content:"+"; font-size:16px; color:var(--muted); margin-left:10px; }
+  .log-details[open] summary::after{ content:"–"; }
+  .log-links{ padding:12px 16px; display:grid; grid-template-columns:repeat(auto-fill, minmax(110px,1fr)); gap:8px; }
+  .log-links a{
+    font-size:12.5px; color:var(--teal); text-decoration:none; font-weight:600;
+    padding:6px 10px; background:var(--paper-dim); border-radius:20px; text-align:center;
+  }
+  .log-links a:hover{ text-decoration:underline; }
+
+  .chart-box{ position:relative; }
+
+  footer{ background:var(--ink); color:#8993A6; padding:36px 0; font-size:12.5px; }
+  footer .wrap{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  footer b{ color:#EDEFF3; }
+
+  .sr-only{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+  @media (prefers-reduced-motion: reduce){ *{ scroll-behavior:auto !important; transition:none !important; } }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <nav class="rail" aria-label="Report sections">
+    <div class="rail-brand">
+      <img src="data:image/png;base64,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" alt="GroNXT" style="height:20px;width:auto;display:block;margin-bottom:11px;">
+      LinkedIn Performance Report
+      <small>Months 4 &amp; 5 Cycle</small>
+    </div>
+    <div class="rail-nav" id="railNav">
+      <a href="#overview">Overview</a>
+      <a href="#content">Content Performance</a>
+      <a href="#engagement">Engagement</a>
+      <a href="#network">Network Growth</a>
+      <a href="#reconciliation">Outreach Reconciliation</a>
+      <a href="#pipeline">Opportunities</a>
+      <a href="#connections">Verified Connections</a>
+    </div>
+    <div class="rail-foot">Prepared for<br><b style="color:#cdd3de">Dr. Rajeev Jha</b></div>
+  </nav>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="wrap">
+        <div class="hero-brand">
+          <img src="data:image/png;base64,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" alt="GroNXT logo" class="hero-logo">
+        </div>
+        <div class="hero-kicker">LinkedIn Performance Report · Months 4 &amp; 5</div>
+        <h1>LinkedIn Performance Report — Months 4 &amp; 5</h1>
+        <p class="hero-sub">Prepared by the GroNXT team for Dr. Rajeev Jha.<br>Goal: Strengthen executive visibility and brand positioning in cybersecurity and AI governance through consistent content, senior-network expansion and engagement.</p>
+        <div class="hero-meta">
+          <div>Focus areas: <b>Cybersecurity Leadership · AI Governance · Digital Trust</b></div>
+          <div>Cycle: <b>Posts 13–20, Months 4–5</b></div>
+        </div>
+
+        <div class="kpi-strip">
+          <div class="kpi" tabindex="0">
+            <div class="kpi-num">3,875</div>
+            <div class="kpi-label">Total Impressions <span class="info-dot">i</span></div>
+            <div class="tip">Total number of times Posts 13–20 appeared on someone's LinkedIn feed across this cycle — the sum of all eight posts' individual impression counts.</div>
+          </div>
+          <div class="kpi" tabindex="0">
+            <div class="kpi-num">6<span>%</span></div>
+            <div class="kpi-label">Engagement Rate <span class="info-dot">i</span></div>
+            <div class="tip">Calculated as (Likes + Comments + Reposts) ÷ Impressions × 100, averaged across Posts 13–20. It measures how much of the audience that saw a post actually interacted with it.</div>
+          </div>
+          <div class="kpi" tabindex="0">
+            <div class="kpi-num">362<span>/1,031</span></div>
+            <div class="kpi-label">Connections Accepted — 35% <span class="info-dot">i</span></div>
+            <div class="tip">362 of the 1,031 people on the outreach target list accepted a connection request — a 35% acceptance rate.</div>
+          </div>
+          <div class="kpi" tabindex="0">
+            <div class="kpi-num">202</div>
+            <div class="kpi-label">People Engaged <span class="info-dot">i</span></div>
+            <div class="tip">202 distinct likes and comments recorded on Posts 13–20 — the people who actively engaged with the content.</div>
+          </div>
+          <div class="kpi" tabindex="0">
+            <div class="kpi-num">2</div>
+            <div class="kpi-label">Opportunities Generated <span class="info-dot">i</span></div>
+            <div class="tip">2 opportunities surfaced through inbound LinkedIn outreach this cycle: a CISO / Enterprise Security Sales opportunity at Kapalins (via Sindhuja R.) and an invitation to a Coursera executive roundtable on AI skills and workforce transformation (via Janvi Desai).</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- ============ OVERVIEW ============ -->
+    <section id="overview">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-num">Executive Summary</div>
+            <h2>Months 4 &amp; 5 Overview</h2>
+          </div>
+        </div>
+        <p class="section-intro">Content performance held a strong engagement rate across all eight posts, while targeted outreach reached senior decision-makers at 59 enterprise entities. The standout result: a confirmed network of 362 senior professionals, 82% of them at Director level or above.</p>
+
+        <div class="metrics-grid">
+          <div class="stat-card"><div class="n">3,875</div><div class="l">Total Impressions</div></div>
+          <div class="stat-card"><div class="n">214</div><div class="l">Total Likes</div></div>
+          <div class="stat-card"><div class="n">15</div><div class="l">Total Comments Received</div></div>
+          <div class="stat-card"><div class="n">202</div><div class="l">People Engaged</div></div>
+          <div class="stat-card"><div class="n">1,031</div><div class="l">Connections Sent</div></div>
+          <div class="stat-card"><div class="n teal">362</div><div class="l">Connections Accepted — 35%</div></div>
+        </div>
+
+        <div class="grid-2" style="margin-top:24px;">
+          <div class="card">
+            <div class="card-title">Strategic outcomes</div>
+            <div class="card-sub">The five developments that defined Months 4 &amp; 5</div>
+            <ul class="bullets">
+              <li><b>Visibility &amp; content performance.</b> 3,875 impressions and 214 likes across Posts 13–20, holding a 6% average engagement rate, with a strong concentration of cybersecurity, GRC, AI-governance and digital-trust professionals engaging — including leaders from Comviva, KPMG and Devsha Tech.</li>
+              <li><b>Network penetration.</b> 1,031 targeted connection requests sent to senior leaders across 59 organizations, yielding 362 confirmed connections — a 35% conversion rate.</li>
+              <li><b>Seniority quality.</b> Of the 362 accepted connections, 298 (82%) sit at Director/Head level or above — 151 Directors/Heads, 133 MDs/Partners and 14 C-Suite/CXOs.</li>
+              <li><b>Inbound opportunities.</b> Direct outreach surfaced a CISO / Enterprise Security Sales opportunity at Kapalins and an invitation to a Coursera executive roundtable on AI skills and workforce transformation — both arriving without outbound sales motion.</li>
+              <li><b>Market mapping.</b> Outreach concentrated in global banks and consultancies — led by Morgan Stanley (112 targeted, 38 confirmed), Goldman Sachs (87 targeted, 45 confirmed) and Visa (101 targeted, 25 confirmed).</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Seniority of accepted network</div>
+            <div class="card-sub">362 confirmed connections, by seniority band</div>
+            <div class="funnel" id="seniorityBox" style="margin-top:12px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTENT PERFORMANCE ============ -->
+    <section id="content">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-num">Content Performance</div>
+            <h2>Every post cleared benchmark engagement</h2>
+          </div>
+        </div>
+        <p class="section-intro">Content centered on cybersecurity leadership, AI governance and digital trust. Post 15 led on likes and engagement rate; Post 20 delivered the widest reach.</p>
+
+        <div class="grid-2" style="margin-top:28px;">
+          <div class="card">
+            <div class="card-title">Impressions vs. engagement rate, by post</div>
+            <div class="card-sub">Bars: impressions (left axis) · Line: engagement rate (right axis)</div>
+            <div class="chart-box" style="height:300px;"><canvas id="chartContent"></canvas></div>
+          </div>
+
+          <div class="card" style="display:flex; flex-direction:column;">
+            <div class="card-title">Post-by-post breakdown</div>
+            <div class="card-sub">Impressions · Likes · Comments · Engagement rate</div>
+            <table>
+              <thead><tr><th>Post</th><th>Impr.</th><th>Likes</th><th>Comments</th><th>Rate</th></tr></thead>
+              <tbody id="postTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ELITE ENGAGEMENT ============ -->
+    <section id="engagement">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-num">Engagement</div>
+            <h2>Who engaged, post by post</h2>
+          </div>
+        </div>
+        <p class="section-intro">Named engagement from senior cybersecurity, GRC, AI-governance and digital-trust professionals, including leaders from Comviva, KPMG and Devsha Tech. Dr. Rajeev Jha's own activity as post author is excluded below.</p>
+
+        <div class="tabbar" id="postPeopleTabs" style="margin-top:24px;"></div>
+        <div class="people-grid" id="postPeopleGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ NETWORK GROWTH ============ -->
+    <section id="network">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-num">Network Growth</div>
+            <h2>Targeted outreach, concentrated where it matters</h2>
+          </div>
+        </div>
+        <p class="section-intro">Outreach was directed at global investment banks, Big Four and strategy consultancies, and payments/technology leaders — with 47% of all outreach concentrated in the top five target firms, and 96% of the sent list mapped to a named target-company universe of 18 organizations.</p>
+
+        <div class="card" style="margin-top:28px;">
+          <div class="card-title">Outreach conversion</div>
+          <div class="card-sub">Requests sent → confirmed, accepted matches</div>
+          <div class="funnel" id="funnelBox"></div>
+        </div>
+
+        <div class="grid-2" style="margin-top:20px;">
+          <div class="card">
+            <div class="card-title">Confirmed connections by organization</div>
+            <div class="card-sub">Top organizations, of 362 confirmed matches</div>
+            <div class="chart-box" style="height:380px;"><canvas id="chartOrgs"></canvas></div>
+          </div>
+          <div class="card">
+            <div class="card-title">Target list by function</div>
+            <div class="card-sub">1,031 targeted profiles, grouped by professional function</div>
+            <div class="chart-box" style="height:320px;"><canvas id="chartSegment"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RECONCILIATION ============ -->
+    <section id="reconciliation">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-num">Outreach Reconciliation</div>
+            <h2>Sent vs. accepted</h2>
+          </div>
+        </div>
+        <p class="section-intro">Of the 1,031 people on the outreach target list, 362 have confirmed as accepted connections — a 35% acceptance rate. The remaining 669 have not yet accepted.</p>
+
+        <div class="grid-3" style="margin-top:26px;">
+          <div class="stat-card"><div class="n">1,031</div><div class="l">People in target / sent list</div></div>
+          <div class="stat-card"><div class="n teal">362</div><div class="l">Accepted — 35% acceptance rate</div></div>
+          <div class="stat-card"><div class="n">669</div><div class="l">Sent, not yet accepted</div></div>
+        </div>
+
+        <div class="card" style="margin-top:20px;">
+          <div class="card-title">Composition of the 1,031 targeted profiles</div>
+          <div class="card-sub">Accepted vs. still pending</div>
+          <div class="stacked-bar">
+            <div class="stacked-seg" style="width:35%;background:var(--teal);">362 · Accepted (35%)</div>
+            <div class="stacked-seg" style="width:65%;background:var(--gold);">669 · Pending (65%)</div>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:20px;">
+          <div class="card">
+            <div class="card-title">Targeted vs. accepted, by organization</div>
+            <div class="card-sub">People targeted in outreach vs. confirmed accepted connections</div>
+            <div class="chart-box" style="height:420px;"><canvas id="chartTargetVsAccepted"></canvas></div>
+          </div>
+          <div class="card">
+            <div class="card-title">Conversion rate by organization</div>
+            <div class="card-sub">Accepted ÷ targeted, among the 18 primary target firms</div>
+            <div class="conv-cols">
+              <div>
+                <div class="card-sub" style="margin-bottom:6px;">Strongest conversion</div>
+                <ul class="conv-list leaders" id="convLeaders"></ul>
+              </div>
+              <div>
+                <div class="card-sub" style="margin-bottom:6px;">Weakest conversion</div>
+                <ul class="conv-list laggards" id="convLaggards"></ul>
+              </div>
+            </div>
+            <div class="card-title" style="margin-top:22px;">Target-list composition</div>
+            <div class="chip-row" id="targetChips" style="margin-top:8px;"></div>
+            <div class="card-sub" style="margin-top:10px;">18 primary target organizations across 48 company-name entries.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OPPORTUNITIES ============ -->
+    <section id="pipeline">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-num">Opportunities</div>
+            <h2>Opportunities Received</h2>
+          </div>
+        </div>
+        <p class="section-intro">Consistent visibility in cybersecurity and AI-governance conversations is already surfacing direct interest — both a leadership role and a platform invitation arrived through inbound outreach, without any active sales motion.</p>
+        <p class="section-intro">These conversations are tracked as a distinct outcome from the 362 accepted connection requests above, not folded into that acceptance metric.</p>
+
+        <div class="grid-2" style="margin-top:28px;">
+          <div class="pipeline-card">
+            <div class="tag">Opportunity</div>
+            <h3>Sindhuja R.</h3>
+            <p>Direct inbound outreach presenting CISO and Enterprise Security Sales leadership opportunities at Kapalins — a concrete job opportunity arriving through the network Rajeev has built.</p>
+          </div>
+          <div class="pipeline-card">
+            <div class="tag">Opportunity</div>
+            <h3>Janvi Desai</h3>
+            <p>Invitation to a Coursera executive roundtable on AI skills and workforce transformation — a thought-leadership and visibility opportunity, extended by the Associate Director of Delegate Acquisition.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VERIFIED CONNECTIONS ============ -->
+    <section id="connections">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-num">Supporting Data</div>
+            <h2>Verified accepted decision-makers</h2>
+          </div>
+        </div>
+        <p class="section-intro">All 362 confirmed matches between the target list and the accepted-connections export, with connection date and LinkedIn profile. Searchable and sortable.</p>
+
+        <div class="card" style="margin-top:24px;">
+          <div class="search-row">
+            <input type="text" id="ledgerSearch" placeholder="Search by name, title or organization…" />
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr>
+                <th data-key="0">Name <span class="arrow">▾</span></th>
+                <th data-key="1">Title <span class="arrow"></span></th>
+                <th data-key="2">Organization <span class="arrow"></span></th>
+                <th data-key="3">Connected <span class="arrow"></span></th>
+                <th data-key="-1">Profile</th>
+              </tr></thead>
+              <tbody id="ledgerBody"></tbody>
+            </table>
+          </div>
+          <div class="row-count" id="ledgerCount"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div><b>LinkedIn Performance Report</b> — Months 4 &amp; 5 Cycle · Prepared by the GroNXT team</div>
+        <div>Prepared for <b>Dr. Rajeev Jha</b></div>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<script>
+/* ============================================================
+   DATA
+============================================================ */
+const posts = [
+  {id:13, impressions:499, likes:18, comments:2, rate:4, tag:null},
+  {id:14, impressions:386, likes:20, comments:0, rate:5, tag:null},
+  {id:15, impressions:596, likes:52, comments:2, rate:9, tag:"Peak likes &amp; engagement rate"},
+  {id:16, impressions:321, likes:25, comments:0, rate:8, tag:null},
+  {id:17, impressions:510, likes:24, comments:0, rate:5, tag:null},
+  {id:18, impressions:458, likes:25, comments:6, rate:7, tag:"Most comments"},
+  {id:19, impressions:375, likes:18, comments:2, rate:5, tag:null},
+  {id:20, impressions:730, likes:32, comments:3, rate:5, tag:"Highest reach"},
+];
+
+const topOrgs = [
+  {name:"Goldman Sachs", count:45},
+  {name:"Morgan Stanley", count:38},
+  {name:"Accenture", count:38},
+  {name:"BCG", count:35},
+  {name:"EY", count:32},
+  {name:"Deloitte", count:31},
+  {name:"HSBC", count:31},
+  {name:"Visa", count:25},
+  {name:"Capgemini", count:20},
+  {name:"KPMG", count:14},
+  {name:"Mastercard", count:12},
+  {name:"Citi", count:10},
+  {name:"Bain & Company", count:8},
+  {name:"PwC", count:6},
+  {name:"McKinsey & Company", count:4},
+  {name:"American Express", count:3},
+  {name:"BFSI", count:3},
+];
+
+const segmentCoverage = [
+  {name:"Other", count:465},
+  {name:"HR / Talent / Recruitment", count:283},
+  {name:"Technology / Engineering / IT", count:142},
+  {name:"Finance / Accounting", count:41},
+  {name:"Operations / General Mgmt", count:39},
+  {name:"Consulting / Advisory", count:25},
+  {name:"Sales / Business Dev.", count:24},
+  {name:"Marketing / Comms", count:12},
+];
+
+/* Target list (sent) vs confirmed accepted, by organization */
+const targetVsAccepted = [
+  {name:"Morgan Stanley", target:112, accepted:38},
+  {name:"Visa", target:101, accepted:25},
+  {name:"EY", target:99, accepted:32},
+  {name:"Goldman Sachs", target:87, accepted:45},
+  {name:"Accenture", target:82, accepted:38},
+  {name:"BCG", target:74, accepted:35},
+  {name:"Deloitte", target:74, accepted:31},
+  {name:"HSBC", target:68, accepted:31},
+  {name:"Bain & Company", target:54, accepted:8},
+  {name:"KPMG", target:51, accepted:14},
+  {name:"Capgemini", target:40, accepted:20},
+  {name:"Mastercard", target:38, accepted:12},
+  {name:"McKinsey & Company", target:37, accepted:4},
+  {name:"Citi", target:35, accepted:10},
+  {name:"Shell", target:20, accepted:0},
+  {name:"PwC", target:18, accepted:6},
+  {name:"BFSI", target:14, accepted:3},
+  {name:"American Express", target:11, accepted:3},
+];
+
+const targetCompanies = ["Morgan Stanley","Visa","EY","Goldman Sachs","Accenture","BCG","Deloitte","HSBC","Bain & Company","KPMG","Capgemini","Mastercard","McKinsey & Company","Citi","Shell","PwC","BFSI","American Express"];
+
+/* Seniority mix of the 362 accepted connections */
+const seniorityData = [
+  {label:"Director / Head", value:151, max:151},
+  {label:"MD / President / Partner", value:133, max:151},
+  {label:"Other", value:41, max:151},
+  {label:"Manager / Lead", value:16, max:151},
+  {label:"C-Suite / CXO", value:14, max:151},
+  {label:"VP", value:7, max:151},
+];
+
+const postPeople = {
+  13: [
+    ["Kapil Kumar","Manager - Corporate Strategy CRM Business Architect, Sales Effectiveness","Like"],
+    ["Sanjay S","Project Manager at New Balance","Like"],
+    ["Gaurav Darbari","|Cyber Security-IITG-Hackathon Winner🏆-CXO Awardee /Speaker Trainer |Digital Transformation IoT/Tech Evangelist/Automation |Cloud Solution AWS/Azure |Lean Six Sigma Green-Black Belt/Agile Practitioner/IIM Mumbai","Like"],
+    ["Rajiv Sharma","Director Technical @ Comviva | FinTech | Driving Secure & Scalable Mobile Applications | Java & Spring Boot Expert | Application Architecture & SDLC Security Thought Leader","Like"],
+    ["Chain Singh Shekhawat","Manager – Administration, Technical Projects, Facility Management, Security & GCMS | Comviva","Like"],
+    ["Snehal Nivsarkar","Product Marketing Manager at Comviva","Like"],
+    ["Ankit Saxena","Strategy & Transformation | Corporate & Growth Strategy | Ex-CARIAD (Volkswagen Group) | Ex-Bosch | MDI Gurgaon | ESCP Europe Business School | NIT Hamirpur","Like"],
+    ["Nishchay Edmund Paschal","Consultant | KPMG | Digital Trust | Views are my own","Like"],
+    ["Govind Sawhney","M.Sc. | Ex - KPMG Cloud Security & Governance, Risk and Compliance","Like"],
+    ["Avinash Tripathi","#CISO at Devsha Tech Pvt Ltd","Like"],
+    ["CA. Vivek Verma Tamrakar","Experienced IT GRC Professional specialising in AI Governance, Data Privacy, ISO 27001, SOX compliance etc.","Insightful"],
+    ["Protim Bhattacharya","Vice President, Product Management | Building the Future of Digital Payments | AI & Fintech Strategy | Product Innovation | Financial Inclusion","Like"],
+    ["Atul Bassi","Senior Principal Architect | Application Security | Product Security | Secure-by-Design | Security CoE","Like"],
+    ["Mridula Mittal","Security and GRC","Like"],
+    ["Gaurav Shukla","Senior Application Security Engineer in Comviva|Product Security Testing|Digital Banking|Wallet Payment|Security Testing |VAPT|DAST","Like"],
+    ["Satinder Sokhey","Senior Director – Technology | FinTech & Digital Payments | SAAS | Generative AI Leader (Google) | Cloud Architect (GCP/AWS) | Telecom Solutions","Like"]
+  ],
+  14: [
+    ["Sreelatha Jayaprakash","DGM - Supply Chain Management at Comviva Technologies Limited, A Tech Mahindra Company.","Like"],
+    ["Nagvendra Pratap Singh","Helping Enterprises Understand, Prioritise & Reduce Cloud Risk | AI Security | Exposure Management","Like"],
+    ["Sanjay S","Project Manager at New Balance","Like"],
+    ["Chain Singh Shekhawat","Manager – Administration, Technical Projects, Facility Management, Security & GCMS | Comviva","Like"],
+    ["Tapan Varma","Global Program Leader | Fintech | Telecom | AI & Digital Transformation | Enterprise Transformation | Semiconductor & Embedded Systems","Like"],
+    ["Raviprem C.J.","Senior Technical Program Manager @ Kyndryl ➔ IT Infrastructure Delivery ➔ Cloud & Data Centre Migrations (DC Vacate | P2V | V2V) ➔ Cybersecurity Remediation ➔ Certified: PMP® | PMI-RMP® | Azure Solutions Architect Expert","Like"],
+    ["Jay Bavisi","Award Winning Founder and CEO of EC-Council Group","Like"],
+    ["Shubham Bhardwaj","Assistant Manager @ KPMG || SOC 1 & SOC 2 || Cloud Security || ITGC || ITAC","Like"],
+    ["Dhan Vriddhi","I am, a Personal Finance Professional and an AMFI Registered Experienced Mutual Fund Distributor. Helping Clients based out of India and abroad, Achieve their financial Goals.","Support"],
+    ["Nitin Parasar","CDMP® Certified (DAMA) | Data Governance | Data Quality | Data Stewardship","Like"],
+    ["Rahul Prabhakar","Information Technology Operations Manager, Team Leadership, Program Management","Like"],
+    ["Ashirwad Tiwari","SAP Certified | SAP Security and GRC | SAP Basis | SAP BTP Administrator | EY","Like"],
+    ["Amarnath Reddy","Senior Electronic Engineer","Like"],
+    ["Ravi Ranjan","Assistant Manager at MetLife | Technology Service |IT Audit | GRC |ISO 27001:2022| |ISO 42001 | AI Management |TPRM| Ex EY| Ex KPMG| Views are Personal.","Like"],
+    ["Mridula Mittal","Security and GRC","Like"],
+    ["Atul Bassi","Senior Principal Architect | Application Security | Product Security | Secure-by-Design | Security CoE","Like"],
+    ["Abhinav Mishra","Manager | EY | Cybersecurity, Privacy, Compliance, Assurance, Quality Engineering and GRC","Like"],
+    ["Nagaraja Bangalore Subbarao DPDPA Expert / AI / Data Privacy / Fractional DPO","Ex-EY | Independent Director & Data Auditor | CXO & Board Advisor | DPDPA & Data Privacy Expert | Data Protection, IP & Tech Lawyer | AI & Digital Trust Advisor | Fractional DPO | 18+ Years | Speaker | Author | Regula8","Like"],
+    ["Marcus Hall","🥇#1 Rated Resume Writer on LinkedIn | Land 2+ job interviews every week. | #1 ranked Creator for daily Christian job search tips & inspiration! | Join 95K+ Believers & Growing! | 42M Views!","Like"]
+  ],
+  15: [
+    ["Nagvendra Pratap Singh","Helping Enterprises Understand, Prioritise & Reduce Cloud Risk | AI Security | Exposure Management","Like"],
+    ["Vishal Sharma","Engineering Leader | AI-Led Delivery & Automation | Scaled Web/Mobile/Backend Platforms | Native/React Native & Node.js | Solution Architect | Python | Tech Strategy & Governance","Like"],
+    ["Abhijeet Ghude","SVP of Engineering @ Yabx | Co-Founder & ex-CTO @ Omnirio | P/SAAS | Integrations | Solution Architect","Like"],
+    ["Saurabh Vashishth","DataCentre & Cloud Infra Architect | AWS | OpenStack | VMware | Storage | Redhat | Backup Solutions | GenAI | Security","Like"],
+    ["Vijay Kumar","Sr. Principal Infra Associate","Like"],
+    ["CA. Vivek Verma Tamrakar","Experienced IT GRC Professional specialising in AI Governance, Data Privacy, ISO 27001, SOX compliance etc.","Like"],
+    ["Sanjay S","Project Manager at New Balance","Like"],
+    ["Ritesh Shukla","Helping Enterprise Organisation's' Dev, Ops, and Security teams to collaborate and release better software","Like"],
+    ["Netika Pathak","Enterprise Sales Manager","Like"],
+    ["L Vikas Reddy","Manager at KPMG | Cybersecurity and Data Privacy FIP | CIPP/E | CIPM | CISM","Like"],
+    ["Ajay Agrawal","Asst. Manager at KPMG || LA ISO 27001, 27701, & 22301 || Masters of Cyber Law and Information Security at NLIU Bhopal || Semi-Qualified CMA || Mechanical Engineer, SRMIST","Like"],
+    ["Abhishek Tiwari","Incident Responder || Forensic Investigator || CHFI || ECIH || ACE","Like"],
+    ["Naveen Kaushal","Senior Principal architect Comviva","Like"],
+    ["Suman Kumar","Sr. Technical Manager | Info Security & Network @ Comviva","Like"],
+    ["Gaurav Kalra","Cloud solution Sales","Like"],
+    ["Jagpal Singh Sisodia","CISM CCSK ISO/IEC 27001:2013/2022 Lead Auditor","Like"],
+    ["Dhan Vriddhi","I am, a Personal Finance Professional and an AMFI Registered Experienced Mutual Fund Distributor. Helping Clients based out of India and abroad, Achieve their financial Goals.","Like"],
+    ["Rohit K Jha","Cybersecurity Consultant | Key Account Manager | Business Development","Like"],
+    ["Arun Kumar","Information Security Enthusiasts","Like"],
+    ["Sreelatha Jayaprakash","DGM - Supply Chain Management at Comviva Technologies Limited, A Tech Mahindra Company.","Like"],
+    ["Deepak Singhal","Own it. Automate it. Scale it :: Process to Performance | Consistency Drives Scale","Like"],
+    ["Gaurav Shukla","Senior Application Security Engineer in Comviva|Product Security Testing|Digital Banking|Wallet Payment|Security Testing |VAPT|DAST","Like"],
+    ["Avinash Tripathi","#CISO at Devsha Tech Pvt Ltd","Like"],
+    ["Gaurav Goyal (GG)","Technical Lead (Digital Transformation) | National e-Governance Division, Ministry of Electronics and Information Technology, Government of India","Like"],
+    ["Varun Grover","Post Quantum Security Consulting and Migration Design Architect |ex EY| ex IBMer/kyndryl | IIIT-B| Vibe coder","Like"],
+    ["Chain Singh Shekhawat","Manager – Administration, Technical Projects, Facility Management, Security & GCMS | Comviva","Like"],
+    ["Versha Sharma","administration","Like"],
+    ["Snehal Nivsarkar","Product Marketing Manager at Comviva","Like"],
+    ["Archana Gupta","Consulting-Focused Executive | BFSI | Strategic Growth | Service Line Development | Leadership Excellence","Like"],
+    ["Ashirwad Tiwari","SAP Certified | SAP Security and GRC | SAP Basis | SAP BTP Administrator | EY","Like"],
+    ["Parthiban Jegatheesan","I help Businesses to Secure their Apps With Professional Application Pentesting | Trusted by Fortune 500 & High-Growth B2B Companies | Managing Director at Peneto Labs","Like"],
+    ["Pushpendra Singh Jadon","Key Account Manager","Like"],
+    ["Hemant Gupta","Revenue Controller | Ind AS 115 & IFRS 15 | FP&A & Business Finance | CA | Tech & SaaS","Like"],
+    ["Anand Kumar","Senior Technical Manager at Comviva","Like"],
+    ["Ravi Ranjan","Assistant Manager at MetLife | Technology Service |IT Audit | GRC |ISO 27001:2022| |ISO 42001 | AI Management |TPRM| Ex EY| Ex KPMG| Views are Personal.","Like"],
+    ["Sunny Kumar Chauhan","✅ Recruitment ✅ Hiring Insider | Feedback in 48 Working hrs.✅ Top Job Search Strategies Voice ✅Resume Writing ✅LinkedIn Branding + Management ✅ Helped 6000+ professionals in Job transition","Like"],
+    ["AmitKumar Sahani","CISA | Information Security | Cyber GRC | ISO 27001 | NIST CSF | AI Governance | Third-Party Risk | Data Privacy","Like"],
+    ["Shivam Garg","Cybersecurity Enthusiast |Business Development | Cybersecurity Consultant |Cloud /Enterprise/Access Security | IT Risk Management","Like"],
+    ["Umamaheswararao Kondeti CISSP","GRC | CISSP | CISM | CISA | ISO 27001 LA | CC | CEH | Air Veteran","Like"],
+    ["Shivam Rana","Delivering Cutting-Edge Cybersecurity Solutions Across Industries (Cert-In empanelled)","Like"],
+    ["Abhinav Mishra","Manager | EY | Cybersecurity, Privacy, Compliance, Assurance, Quality Engineering and GRC","Like"],
+    ["Abhishek Mukherjee","IT Infrastructure & Security Lead | CISM® | CISA® | ISO 27001 Lead Auditor | 25+ Yrs in Network Operations, GRC, Internal Audit & Vendor Risk Management","Like"],
+    ["Sourav Bhaumik","Director - Digi Samurai | Cybersecurity & Digital Trust Leader | Helping Boards & CXOs Navigate Cyber Risk, AI Governance & Operational Resilience | Strategic Advisor to Organizations | vCISO","Like"],
+    ["Dhivyasthitha M","Inside Sales Representative @ CyberPWN | Ex- FARE Labs | MBA Graduate | Major in Marketing | Minor in Operations | Summer Intern @ Amul | Hyderabad","Like"],
+    ["Abhinav Choubey CCISO CISSP CISA CRISC QPA CPISI CPSA ISMS","Associate Director","Like"],
+    ["Amit Kumar, CISSP","Vice President, CISO","Like"],
+    ["Anshul bhatt","Cyber/ISO/DPDP/PCI/GDPR/SOC/VAPT","Like"],
+    ["Dr. Gurpreet Singh","🚀 Driving Cloud Strategy & Digital Transformation | 🤝 Leading GRC, InfoSec & Compliance | 💡Thought Leader for Future Leaders | 🏆 Award-Winning CTO/CISO | 🌎 Helping Businesses Win in Tech","Like"],
+    ["Hanuman Kulria","Solution Architect | Technology Leader | Customer-Centric Innovator | Fintech | On-Prem & Cloud-Based Solutions","Like"],
+    ["Atul J.","Senior Designer @ Comviva | Research and Development, Brand Communication","Like"],
+    ["Naveen Yadav","Lead QA Automation Engineer at YABX (Comviva) | AI/ ML Testing | DeepEvals | Rest assured | Playwright Javascript | Certifications : AI and ML certification from Intellipaat","Like"]
+  ],
+  16: [
+    ["Sourav Bhaumik","Director - Digi Samurai | Cybersecurity & Digital Trust Leader | Helping Boards & CXOs Navigate Cyber Risk, AI Governance & Operational Resilience | Strategic Advisor to Organizations | vCISO","Like"],
+    ["Gaurav Kalra","Cloud solution Sales","Like"],
+    ["Vipul Singh","Senior Engineer @ Comviva || Zakir Husain College Of Engineering & Technology","Like"],
+    ["ravindran v","Information Security Manager in Govt. Organisation","Like"],
+    ["Ankit Saxena","Strategy & Transformation | Corporate & Growth Strategy | Ex-CARIAD (Volkswagen Group) | Ex-Bosch | MDI Gurgaon | ESCP Europe Business School | NIT Hamirpur","Like"],
+    ["Sanjay S","Project Manager at New Balance","Like"],
+    ["Pushpendra Singh Jadon","Key Account Manager","Like"],
+    ["Prajwal Giri","Security & Compliance | Risk Management | IT Audit | ISO 27001 | ITGC | Internal Audit","Like"],
+    ["Debrup Mitra","Enterprise Sales @ Sprinto","Like"],
+    ["Rakhee Sonkhla","Bid Management| Proposal Management ||Sales Operation","Like"],
+    ["Shivam Garg","Cybersecurity Enthusiast |Business Development | Cybersecurity Consultant |Cloud /Enterprise/Access Security | IT Risk Management","Like"],
+    ["Shivendra Srivastava","CISA|| Information Security Manager || ISC2 CC ||CCNA|| Risk Advisory || ISO 27001 || Privacy || ITIL","Like"],
+    ["Abhishek Mukherjee","IT Infrastructure & Security Lead | CISM® | CISA® | ISO 27001 Lead Auditor | 25+ Yrs in Network Operations, GRC, Internal Audit & Vendor Risk Management","Like"],
+    ["Sunny Kumar Chauhan","✅ Recruitment ✅ Hiring Insider | Feedback in 48 Working hrs.✅ Top Job Search Strategies Voice ✅Resume Writing ✅LinkedIn Branding + Management ✅ Helped 6000+ professionals in Job transition","Like"],
+    ["Rohit K Jha","Cybersecurity Consultant | Key Account Manager | Business Development","Like"],
+    ["Vijay Kumar","Sr. Principal Infra Associate","Like"],
+    ["Venkat Aditya Appala","Enterprise Transformation & Delivery Leader | BFSI | Global Portfolio & Technology Transformation | Product, Data & AI | 18+ Years","Like"],
+    ["Ashirwad Tiwari","SAP Certified | SAP Security and GRC | SAP Basis | SAP BTP Administrator | EY","Like"],
+    ["Samir Alam","IT/Technology Audit & Controls Assurance | ITGC · SOX/ISO 27001 Controls Testing | SAST/DAST · Threat Modeling · SQL & Automation | CEH v12 | Pursuing CISA","Love"],
+    ["Sri Vyshnavi Kambham. CRISC,CISM,CC","Risk and Control Advisor at Shell India","Like"],
+    ["Shivaji Parashar","Senior Consultant @ EY | Vulnerability Assessment, Data Centre Security audit.","Like"],
+    ["Abhinav Mishra","Manager | EY | Cybersecurity, Privacy, Compliance, Assurance, Quality Engineering and GRC","Like"],
+    ["Atul J.","Senior Designer @ Comviva | Research and Development, Brand Communication","Like"],
+    ["Naveen Yadav","Lead QA Automation Engineer at YABX (Comviva) | AI/ ML Testing | DeepEvals | Rest assured | Playwright Javascript | Certifications : AI and ML certification from Intellipaat","Like"]
+  ],
+  17: [
+    ["Gaurav Kalra","Cloud solution Sales","Like"],
+    ["Arun Kumar","Information Security Enthusiasts","Like"],
+    ["Ritesh Shukla","Helping Enterprise Organisation's' Dev, Ops, and Security teams to collaborate and release better software","Like"],
+    ["Harpreet Singh","Techno Sales Leader","Like"],
+    ["Chain Singh Shekhawat","Manager – Administration, Technical Projects, Facility Management, Security & GCMS | Comviva","Like"],
+    ["Satinder Sokhey","Senior Director – Technology | FinTech & Digital Payments | SAAS | Generative AI Leader (Google) | Cloud Architect (GCP/AWS) | Telecom Solutions","Like"],
+    ["Shivendra Srivastava","CISA|| Information Security Manager || ISC2 CC ||CCNA|| Risk Advisory || ISO 27001 || Privacy || ITIL","Like"],
+    ["Sanjay S","Project Manager at New Balance","Like"],
+    ["Suman Kumar","Sr. Technical Manager | Info Security & Network @ Comviva","Like"],
+    ["Suganthi Santhakumar","Sales And Marketing Executive| Information Security Consulting","Like"],
+    ["Shantanu Sarkar","Director of Service Delivery & Operations | Scaling InfoSec & IT Operations | Driving Multi-Million Dollar Growth through Operational Excellence & Customer Success","Like"],
+    ["Jagpal Singh Sisodia","CISM CCSK ISO/IEC 27001:2013/2022 Lead Auditor","Like"],
+    ["Parthiban Jegatheesan","I help Businesses to Secure their Apps With Professional Application Pentesting | Trusted by Fortune 500 & High-Growth B2B Companies | Managing Director at Peneto Labs","Like"],
+    ["Atul Bassi","Senior Principal Architect | Application Security | Product Security | Secure-by-Design | Security CoE","Like"],
+    ["Rakhee Sonkhla","Bid Management| Proposal Management ||Sales Operation","Like"],
+    ["Abhinav Mishra","Manager | EY | Cybersecurity, Privacy, Compliance, Assurance, Quality Engineering and GRC","Like"],
+    ["Ashirwad Tiwari","SAP Certified | SAP Security and GRC | SAP Basis | SAP BTP Administrator | EY","Like"],
+    ["Sunny Kumar Chauhan","✅ Recruitment ✅ Hiring Insider | Feedback in 48 Working hrs.✅ Top Job Search Strategies Voice ✅Resume Writing ✅LinkedIn Branding + Management ✅ Helped 6000+ professionals in Job transition","Like"],
+    ["Amrapali Dasgupta","Sales operations Manager","Like"],
+    ["Sandeep Pandita","Digital Workplace Solution Architect-Artificial Intelligence & Cloud Unit at Tata Consultancy Services","Like"],
+    ["Sana Qureshi","Customer success manager| Cybersecurity |EMS | Helping Organizations Outsmart Cyber Threats","Like"],
+    ["Dhruv Pal","Hello","Like"],
+    ["Atul J.","Senior Designer @ Comviva | Research and Development, Brand Communication","Like"]
+  ],
+  18: [
+    ["Diya Soni","Cybersecurity Advisor 🛡️| Making Cybersecurity Effortless at Astra Security | MBA Marketing | IIM Certified","Like"],
+    ["puneet Singhh","Director of Technical at Comviva","Like"],
+    ["Gaurav Kalra","Cloud solution Sales","Like"],
+    ["Sourav Bhaumik","Director - Digi Samurai | Cybersecurity & Digital Trust Leader | Helping Boards & CXOs Navigate Cyber Risk, AI Governance & Operational Resilience | Strategic Advisor to Organizations | vCISO","Like"],
+    ["L Vikas Reddy","Manager at KPMG | Cybersecurity and Data Privacy FIP | CIPP/E | CIPM | CISM","Like"],
+    ["Rakshitha R Rao","Building Seezo","Like"],
+    ["Chandan Bohra (he/him)","Cyber Security Implementer & AI Technology Enabler","Like"],
+    ["Arun Kumar","Information Security Enthusiasts","Like"],
+    ["Sunny Kumar Chauhan","✅ Recruitment ✅ Hiring Insider | Feedback in 48 Working hrs.✅ Top Job Search Strategies Voice ✅Resume Writing ✅LinkedIn Branding + Management ✅ Helped 6000+ professionals in Job transition","Like"],
+    ["Sadiq Pasha","Group Vice President, Comviva Technologies Ltd. Banking Transformation & Delivery Executive | Mobile Money Digital Transformation | Fintech Product & Global Delivery Leadership | Head of Operations","Like"],
+    ["Akarsh Singh A","Data Privacy SME | CEO@Tsaaro / Advisor@DPO Club","Like"],
+    ["Dhanush VM","Solution Architect at CleanStart","Like"],
+    ["Sanjay S","Project Manager at New Balance","Like"],
+    ["Chetan Basavaraj Halakatti","Desktop Support Engineer @ Comviva | Windows & Mac | Networking | Hardware Support","Like"],
+    ["Chain Singh Shekhawat","Manager – Administration, Technical Projects, Facility Management, Security & GCMS | Comviva","Like"],
+    ["Ravi Ranjan","Assistant Manager at MetLife | Technology Service |IT Audit | GRC |ISO 27001:2022| |ISO 42001 | AI Management |TPRM| Ex EY| Ex KPMG| Views are Personal.","Like"],
+    ["Rajiv Sharma","celebrate","Celebrate"],
+    ["Dhivyasthitha M","Inside Sales Representative @ CyberPWN | Ex- FARE Labs | MBA Graduate | Major in Marketing | Minor in Operations | Summer Intern @ Amul | Hyderabad","Like"],
+    ["CA. Vivek Verma Tamrakar","Experienced IT GRC Professional specialising in AI Governance, Data Privacy, ISO 27001, SOX compliance etc.","Insightful"],
+    ["Abhishek Mukherjee","IT Infrastructure & Security Lead | CISM® | CISA® | ISO 27001 Lead Auditor | 25+ Yrs in Network Operations, GRC, Internal Audit & Vendor Risk Management","Like"],
+    ["Abhinav Mishra","Manager | EY | Cybersecurity, Privacy, Compliance, Assurance, Quality Engineering and GRC","Like"],
+    ["Vipul Singh","Senior Engineer @ Comviva || Zakir Husain College Of Engineering & Technology","Like"],
+    ["Marco Essomba","Founder & CTO, BlockAPT | Technical Director, Total Uptime Technologies | AI, Cybersecurity | ADC, ADN | Application Delivery & Critical Infrastructure | GSLB | Cloud | WAF | WAAP","Like"],
+    ["Rakesh Lakshminarayana CSM® PMP®","Program Director, Delivery and Program Management","Like"]
+  ],
+  19: [
+    ["Sanjay S","Project Manager at New Balance","Like"],
+    ["Diya Soni","Cybersecurity Advisor 🛡️| Making Cybersecurity Effortless at Astra Security | MBA Marketing | IIM Certified","Like"],
+    ["Sunny Kumar Chauhan","✅ Recruitment ✅ Hiring Insider | Feedback in 48 Working hrs.✅ Top Job Search Strategies Voice ✅Resume Writing ✅LinkedIn Branding + Management ✅ Helped 6000+ professionals in Job transition","Like"],
+    ["Rajnish Kumar","Senior Service Delivery Manager, Ensono | AI | ML | Azure | AWS | Oracle | Agile-Scrum | Innovation","Like"],
+    ["Chain Singh Shekhawat","Manager – Administration, Technical Projects, Facility Management, Security & GCMS | Comviva","Like"],
+    ["Snehal Nivsarkar","Product Marketing Manager at Comviva","Like"],
+    ["Rakhee Sonkhla","Bid Management| Proposal Management ||Sales Operation","Like"],
+    ["Suganthi Santhakumar","Sales And Marketing Executive| Information Security Consulting","Like"],
+    ["Jahnavi Seth","Founder & CEO, PrahiX | Building the Enterprise Awareness Platform | Every Layer. One Truth.","Like"],
+    ["CA. Vivek Verma Tamrakar","Experienced IT GRC Professional specialising in AI Governance, Data Privacy, ISO 27001, SOX compliance etc.","Insightful"],
+    ["Vipul Singh","Senior Engineer @ Comviva || Zakir Husain College Of Engineering & Technology","Like"],
+    ["Parthiban Jegatheesan","I help Businesses to Secure their Apps With Professional Application Pentesting | Trusted by Fortune 500 & High-Growth B2B Companies | Managing Director at Peneto Labs","Like"],
+    ["Anshuman Paul","Key Accounts Manager || Delta IT Network || 15+ years of rich experience with global MNCs in sales. Currently bridging cutting-edge IT solutions with client success stories.","Like"],
+    ["Abhinav Mishra","Manager | EY | Cybersecurity, Privacy, Compliance, Assurance, Quality Engineering and GRC","Like"],
+    ["S K S.","Cyber Security-Endpoint,Cloud, Network-Firewall, EDR, XDR, DLP, DSPM, ZTNA, DPDP Compliance. Networking ,IT Infra & Storage, Data Centre.Managed Services - NOC & SOC. Unified Monitoring- SIEM & SOAR,Video Analytics, NMS.","Like"],
+    ["Vipin Parihar","Seasoned Technology Governance, Risk & Compliance Leader | 15+ Yrs | IT Governance, Technology Risk, Infrastructure Governance | VP @ Wells Fargo | CISA, SAFe, ITIL, CSM","Like"],
+    ["Hanuman Kulria","Solution Architect | Technology Leader | Customer-Centric Innovator | Fintech | On-Prem & Cloud-Based Solutions","Like"]
+  ],
+  20: [
+    ["Raviprem C.J.","Senior Technical Program Manager @ Kyndryl ➔ IT Infrastructure Delivery ➔ Cloud & Data Centre Migrations (DC Vacate | P2V | V2V) ➔ Cybersecurity Remediation ➔ Certified: PMP® | PMI-RMP® | Azure Solutions Architect Expert","Like"],
+    ["Priyadarshini Londhe","AI Transformation Leader | Enterprise AI Strategist | GenAI & Agentic AI Evangelist | AI CoE Head | Technology Architect | Advanced Leadership Program: Chief Strategy Officer @ ISB","Like"],
+    ["Aadhithyaa G","Risk and Control Advisor @ Shell","Like"],
+    ["puneet Singhh","Director of Technical at Comviva","Like"],
+    ["Chetan Basavaraj Halakatti","Desktop Support Engineer @ Comviva | Windows & Mac | Networking | Hardware Support","Like"],
+    ["Shreyus KS","Global Partnerships Leader | Hyperscaler GTM | Ex - Deloitte | Ecosystem & Technology Partnerships | Partner-Led Revenue Growth | Telecom & Enterprise Solutions","Like"],
+    ["Ankit Saxena","Strategy & Transformation | Corporate & Growth Strategy | Ex-CARIAD (Volkswagen Group) | Ex-Bosch | MDI Gurgaon | ESCP Europe Business School | NIT Hamirpur","Like"],
+    ["Santosh Tripathi","Global Cybersecurity Director | Cyber Resilience • AI Security Governance • Cloud & Product Security • SOC Transformation • Risk & Compliance | Enterprise Security Leader | Author & PhD Researcher","Like"],
+    ["Prashant Shandilya","Sr.Principal Architect - Driving Digital Transformation with Microservices, AWS, SaaS, AI","Like"],
+    ["Rakhee Sonkhla","Bid Management| Proposal Management ||Sales Operation","Like"],
+    ["Sanjay S","Project Manager at New Balance","Like"],
+    ["Vipul Singh","Senior Engineer @ Comviva || Zakir Husain College Of Engineering & Technology","Like"],
+    ["Yash Gupta","SOC Analyst | Detecting Threats Before They Become Incidents | SIEM · Microsoft Sentinel · Splunk · MITRE ATT&CK · OSINT | Google Cybersecurity Certified | AI-Augmented Security Operations","Like"],
+    ["Shivaji Parashar","Senior Consultant @ EY | Vulnerability Assessment, Data Centre Security audit.","Like"],
+    ["Umamaheswararao Kondeti CISSP","GRC | CISSP | CISM | CISA | ISO 27001 LA | CC | CEH | Air Veteran","Like"],
+    ["Suswet Bhardwaj","Senior Threat Intelligence Professional | OSINT | SOCMINT | Cyber Risk | CISM Certified","Like"],
+    ["Jagpal Singh Sisodia","CISM CCSK ISO/IEC 27001:2013/2022 Lead Auditor","Like"],
+    ["Avinash Tripathi","#CISO at Devsha Tech Pvt Ltd","Like"],
+    ["Abhinav Mishra","Manager | EY | Cybersecurity, Privacy, Compliance, Assurance, Quality Engineering and GRC","Like"],
+    ["Deeksha Sharma","Senior Solutions Specialist at Vyuha.ai","Like"],
+    ["Versha Sharma","administration","Support"],
+    ["Diya Soni","Cybersecurity Advisor 🛡️| Making Cybersecurity Effortless at Astra Security | MBA Marketing | IIM Certified","Like"],
+    ["Atul Bassi","Senior Principal Architect | Application Security | Product Security | Secure-by-Design | Security CoE","Like"],
+    ["Nasib Guleria","Air Force Veteran | In Transition |Cybersecurity | IT Infrastructure | Network Security | GRC | Risk Management | ISO/IEC 27001 | BCP/DR","Like"],
+    ["Rujuta Singh","AI Strategy Day & AI Accelerator Lab for CxOs laser-focused on ROI | Fastest Path to AI Turnaround & Value Creation While Having a Stupidly Good Time | 22+ Years Making Transformation Less Painful |TedX Speaker","Like"],
+    ["Will Stewart, MBA","I help owners bring AI into the business without breaking what already works | 30 yrs in tech & operations | LinkedIn Top Perspective Voice in AI | Twin Dad |","Like"],
+    ["Iain Eyre","Figuring out what a longer, better life actually looks like | Making longevity accessible across health, wealth & relationships | Host of Live Longer and Love It","Like"],
+    ["Kary Oberbrunner®","We protect your IP in the age of AI","Like"]
+  ]
+};
+
+const ledger = [
+["Pankaj Verma","BCG Platinion Managing Director, Chief IT Architect","Boston Consulting Group (BCG)","September 13, 2026","https://www.linkedin.com/in/pankaj-verma-newthinking/"],
+["Rohit Kondapalli","Director of Engineering (AI/ML)","Visa","September 13, 2026","https://www.linkedin.com/in/rohitkondapalli92/"],
+["Soumen Sarkar","Director of Engineering","Visa","September 12, 2026","https://www.linkedin.com/in/soumensarkar1/"],
+["Amit Chugh","Director | Lead Data & AI Engineer (CEMEA)","Visa","September 12, 2026","https://www.linkedin.com/in/amit-chugh-2573b1a/"],
+["Ravi Kiran Achalla","Director, Data Engineering","Visa","September 12, 2026","https://www.linkedin.com/in/ravi-kiran-achalla/"],
+["Pravesh Jha","Director of Engineering","Visa","September 12, 2026","https://www.linkedin.com/in/pravesh-jha/"],
+["Sumeet Singhal","Senior Director of Technology (Site Lead)","Visa","September 12, 2026","https://www.linkedin.com/in/sumeet-singhal-4403b18/"],
+["Sumit Kumar Roy","Director of Engineering","Visa","September 12, 2026","https://www.linkedin.com/in/sumit-kumar-roy-17916635/"],
+["Buddhi Prakash Kothari","Sr. Director, Cyber Security, IAM Technologies at Visa","Visa","September 12, 2026","https://www.linkedin.com/in/bpkothari/"],
+["Sandeep Gunasekaran","Director | Cloud Security Engineering","Visa","September 12, 2026","https://www.linkedin.com/in/sandeepguna/"],
+["Parag Divekar","Head/Director - Sourcing","Visa","September 12, 2026","https://www.linkedin.com/in/parag-divekar/"],
+["Nidhi Yadav","India Marketing Head, Senior Director, India","Boston Consulting Group (BCG)","September 11, 2026","https://www.linkedin.com/in/nidhiyadav/"],
+["Naresh Singh Shekhawat, CPP®","Global Security Director, AP","Boston Consulting Group (BCG)","September 11, 2026","https://www.linkedin.com/in/naresh-singh-shekhawat-cpp%C2%AE-24442712/"],
+["Sankhadeep Sarkar","Director of Product Management","Visa","September 11, 2026","https://www.linkedin.com/in/sankhsarkar/"],
+["Kireeti Kesavamurthy","Director, Software Engineering (Data Engineering & AI)","Visa","September 11, 2026","https://www.linkedin.com/in/kireeti-kesavamurthy/"],
+["Subhasish B.","Strategic Alliances (APAC)","Boston Consulting Group (BCG)","September 11, 2026","https://www.linkedin.com/in/subhasish-b-37756a3b/"],
+["Abheek Singhi","Managing Director and Senior Partner, BCG","Boston Consulting Group (BCG)","September 10, 2026","https://www.linkedin.com/in/abheek-singhi-26948084/"],
+["Manil Gupta","Vice President, AI at BCG X","Boston Consulting Group (BCG)","September 10, 2026","https://www.linkedin.com/in/manilgupta/"],
+["Amith Chugh","Director, Global Mobility","Boston Consulting Group (BCG)","September 10, 2026","https://www.linkedin.com/in/amith-chugh-27316ba/"],
+["Ashish Pathak","Global Senior Director, Operations and Supply Chain Practice","Boston Consulting Group (BCG)","September 10, 2026","https://www.linkedin.com/in/ashish-pathak-b7580740/"],
+["Saurabh Chhajer","Managing Director and Partner","Boston Consulting Group (BCG)","September 10, 2026","https://www.linkedin.com/in/saurabhchhajer/"],
+["Debasree Roy - GMS®","Global Mobility Director","Boston Consulting Group (BCG)","September 10, 2026","https://www.linkedin.com/in/debasree-roy-gms-a7417941/"],
+["Rahul Agarwal","India Operations Senior Director","Boston Consulting Group (BCG)","September 10, 2026","https://www.linkedin.com/in/rahul-agarwal-0a01427/"],
+["Ranjan Arora","Director - BCG Vantage - Center for Customer Insight","Boston Consulting Group (BCG)","September 10, 2026","https://www.linkedin.com/in/ranjank/"],
+["Ashish Prasad","Senior Vice President","Goldman Sachs","September 10, 2026","https://www.linkedin.com/in/ashishprasad-vprisk/"],
+["Sireesha Machiraju","Director","KPMG","September 9, 2026","https://www.linkedin.com/in/sireeshamachiraju/"],
+["Sushant Kumar","Assistant Director- Early Careers Program","EY","September 9, 2026","https://www.linkedin.com/in/sushant-kumar-8b23a2225/"],
+["Siddhartha Asthana","VP, AI Engineering","Mastercard","September 9, 2026","https://www.linkedin.com/in/siddasthana/"],
+["Prince Sidana","Director","KPMG","September 9, 2026","https://www.linkedin.com/in/prince-sidana-40267b13/"],
+["nirav doshi","Director","EY","September 9, 2026","https://www.linkedin.com/in/nirav-doshi-876360149/"],
+["Sashikant Mohanty","Managing Director","PwC","September 9, 2026","https://www.linkedin.com/in/sashikant/"],
+["Amit Goel","Director","Capgemini","September 9, 2026","https://www.linkedin.com/in/amitgoel2k6/"],
+["Sankara Narayanan","Senior VP, GSG","American Express Bank","September 8, 2026","https://www.linkedin.com/in/sankara-narayanan-7801583/"],
+["Sankara Narayanan","Managing Director – Talent Strategy, Advanced Technology Center, India","Accenture","September 8, 2026","https://www.linkedin.com/in/sankara-narayanan-7801583/"],
+["Deepak Dixit, PMP CSTE SAFe Agilist","Director","Mastercard","September 8, 2026","https://www.linkedin.com/in/deepak-dixit-pmp-cste-safe-agilist-9aa489a/"],
+["Sourav Tripathy","Director","KPMG","September 8, 2026","https://www.linkedin.com/in/souravtripathy/"],
+["AMANPREET MAKAR","Vice President","Morgan Stanley","September 8, 2026","https://www.linkedin.com/in/amanpreet-makar/"],
+["Gautam Anand","Director Platform Engineering & AI","Morgan Stanley","September 8, 2026","https://www.linkedin.com/in/ganand/"],
+["Abhishek Tewari","Vice President","Citi","September 7, 2026","https://www.linkedin.com/in/abhishek-tewari-23404b9/"],
+["Sidharth Nag","Collections Operations - GSC India","HSBC","September 7, 2026","https://www.linkedin.com/in/sidharth-nag-5596871b/"],
+["Udayan Nagdeote","Vice President","Citi","September 7, 2026","https://www.linkedin.com/in/udayan-nagdeote-10b43714/"],
+["Abhishek Lahiri","VP & - Public Policy & Government Affairs","Mastercard","September 7, 2026","https://www.linkedin.com/in/abhishek-lahiri-5b49a49/"],
+["Rohit Shobha","Director","PwC","September 7, 2026","https://www.linkedin.com/in/rohitmusale/"],
+["Deepesh Gupta","Director","Capgemini","September 6, 2026","https://www.linkedin.com/in/deepesh-gupta-b4313222/"],
+["Dr. Himanshu Warudkar","Director - Global Head Asset Servicing & Issuer Services Tech, Head Securities Services Tech - India","HSBC","September 6, 2026","https://www.linkedin.com/in/hwarudkar/"],
+["Ranganath Ananth","International Wealth and Premier Banking at HSBC Vietnam","HSBC","September 6, 2026","https://www.linkedin.com/in/ranganath-ananth-5a114716/"],
+["Sumeet Kohli","Vice President, Business Development","Mastercard","September 6, 2026","https://www.linkedin.com/in/sumeetkohli/"],
+["Subhadip Bhattacharya , Ph.D","Senior Director","KPMG","September 5, 2026","https://www.linkedin.com/in/subhadip-bhattacharya-ph-d-498a20a8/"],
+["Kalpesh Astik","Vice President - Business Risk & Resilience","HSBC","September 5, 2026","https://www.linkedin.com/in/kalpesh-astik-227276b/"],
+["Sandeep Deshmukh","Executive Director","Morgan Stanley","September 5, 2026","https://www.linkedin.com/in/sandeep-deshmukh-3994209/"],
+["Nilesh Chuttar","Executive Director","Deloitte","September 5, 2026","https://www.linkedin.com/in/nchuttar/"],
+["Rana R. K. Singh","Director - Strategy & Transactions","EY","September 4, 2026","https://www.linkedin.com/in/rana-r-k-singh/"],
+["Krishna Vatsal Tyagi","Associate Director","KPMG","September 4, 2026","https://www.linkedin.com/in/cakrishnatyagi/"],
+["Yash Chadha","Vice President Business Banking","HSBC","September 4, 2026","https://www.linkedin.com/in/yash-chadha-59a6b7189/"],
+["Mithilesh Kumar","Director Consulting","EY","September 4, 2026","https://www.linkedin.com/in/mithilesh-kumar-b4b8b340/"],
+["Sri D","Workday Technology Vice President","Morgan Stanley","September 4, 2026","https://www.linkedin.com/in/sreekoneru2005/"],
+["Kasturi Kannan Sharma","Associate Vice President","EY","September 4, 2026","https://www.linkedin.com/in/kasturi-kannan-sharma-9b919043/"],
+["Kiran Munyal","Vice President","Goldman Sachs","September 4, 2026","https://www.linkedin.com/in/kiran-munyal-6a8816106/"],
+["Amit Saraswat","Director - Global Mobility Technology - Digital Enablement Lead","Accenture","September 4, 2026","https://www.linkedin.com/in/amit-saraswat-a6438711/"],
+["Dr (H.C.) Anil Jain","Managing Director, CMT Market Lead-Americas; Cross-Industry GCC Strategy & Consulting Global Network","Accenture","September 4, 2026","https://www.linkedin.com/in/aniljain/"],
+["Kheyali Dutta","Talent Acquisition Specialist","Visa","September 3, 2026","https://www.linkedin.com/in/kheyali-dutta-44843a8b/"],
+["Sriram Balakrishnan","Associate Director - AI & Data","EY","September 3, 2026","https://www.linkedin.com/in/sriram-cosmos/"],
+["Sourav Sen","Vice President | Digital Transformation | Advisory Consulting","Accenture","September 3, 2026","https://www.linkedin.com/in/nesvaruos/"],
+["Atheeq Pasha","Director - Sales Capture | GCC","Accenture","September 3, 2026","https://www.linkedin.com/in/atheeqpasha/"],
+["Bragadeesh Damodaran","Vice President","Capgemini","September 3, 2026","https://www.linkedin.com/in/bragadeesh/"],
+["Tanuj Sahni","Global Data Engineering Director","Boston Consulting Group (BCG)","September 3, 2026","https://www.linkedin.com/in/tanuj-sahni-2ab0bb18/"],
+["Chris Baxter","India Head – Investment Solutions","Morgan Stanley","September 3, 2026","https://www.linkedin.com/in/christopherbaxter/"],
+["Gaurav Dhupar","Director – AI & Data Engineering | Enterprise Transformation | GTM & Strategic Alliances","Deloitte","September 3, 2026","https://www.linkedin.com/in/gauravdhupar/"],
+["Prem Iyangar","Managing Director – Life Sciences Industry Practice","Accenture","September 3, 2026","https://www.linkedin.com/in/prem-iyangar-4013884/"],
+["Nikhilesh Deshpande ♠ Capgemini","Director","Capgemini","September 3, 2026","https://www.linkedin.com/in/nikhilesh-deshpande-%E2%99%A0-capgemini-6a590150/"],
+["ASHISH SINHA","Vice President","Goldman Sachs","September 3, 2026","https://www.linkedin.com/in/ashish-sinha1201/"],
+["Najla Mohamed","Manager – Data Management | Data & Analytics","HSBC","September 2, 2026","https://www.linkedin.com/in/najla-mohamed-b29712221/"],
+["Dr. Shobhit Shrotriya","Managing Director - Life Sciences R&D Operations, India","Accenture","September 1, 2026","https://www.linkedin.com/in/dr-shobhit-shrotriya-1162261/"],
+["Vijjayendra Agarwal","Director & Head of Marketing, Brand Governance & BU Communications, KPMG | IMPACT Leader","KPMG","September 1, 2026","https://www.linkedin.com/in/vijjayendraagarwal/"],
+["shabareesha kp","Vice President","Goldman Sachs","September 1, 2026","https://www.linkedin.com/in/shabareesha-kp-48b3aa12/"],
+["Anuradha Gupta","Executive Director, Marketing, Deloitte South Asia","Deloitte","September 1, 2026","https://www.linkedin.com/in/anuradha-gupta-1b2b2436/"],
+["Gaurav Tripathi","Managing Director, Data & AI, GTM Lead - Gen AI, APAC, ME & Japan","Accenture","September 1, 2026","https://www.linkedin.com/in/gaurav-tripathi-71058ab/"],
+["Ganesh DG","Vice President – Enterprise Data & Analytics Programs : Sr Technical Program Manager","Citi","September 1, 2026","https://www.linkedin.com/in/ganeshdg/"],
+["Kiran Bopche","Associate Director GCC sales","EY","September 1, 2026","https://www.linkedin.com/in/kiran-bopche-75738018/"],
+["Mini Nair","Head - Lifesciences Industry Platform | India","Capgemini","September 1, 2026","https://www.linkedin.com/in/nairmini/"],
+["Dr. Karthikeyan Soundararajan","Associate Director","Accenture","September 1, 2026","https://www.linkedin.com/in/karthikeyan-soundararajan-slm/"],
+["Yathish Kumar R","Associate Director Technology Consulting","EY Global Services Limited","September 1, 2026","https://www.linkedin.com/in/yathishk/"],
+["Rajesh Koul","Executive Director - Head Transformation","KPMG","September 1, 2026","https://www.linkedin.com/in/rajeshkoul74/"],
+["Koteswara Rao Yerriboina","Vice President, Workforce Authentication Engineering","Morgan Stanley","September 1, 2026","https://www.linkedin.com/in/koteswara-rao-yerriboina-34b0a426/"],
+["Ritesh Arora","FS DCX - Low Code, No Code and AI Leader","Capgemini","September 1, 2026","https://www.linkedin.com/in/ritesharora123/"],
+["Dipannita Ghosh Biswas","Assistant Director, Brand Marketing & Communications","EY","September 1, 2026","https://www.linkedin.com/in/dipannita-ghosh-biswas-18075174/"],
+["Pallab Dutta","Executive Director","Deloitte","September 1, 2026","https://www.linkedin.com/in/pallab-dutta-60b98b11/"],
+["Sami Khayyum","Associate Director - Data Governance & Master Data Specialist","Capgemini","August 31, 2026","https://www.linkedin.com/in/sami-khayyum-57502122/"],
+["Rohit Agrawal","Director","EY","August 31, 2026","https://www.linkedin.com/in/carohitagr/"],
+["Anand Shankar","Chief Strategy & Transformation Officer","Deloitte South Asia","August 31, 2026","https://www.linkedin.com/in/anand-shankar-3b94345/"],
+["Ranjith Kota","Executive Director","EY","August 31, 2026","https://www.linkedin.com/in/ranjith-executive/"],
+["Rajeev Gangal","Senior Vice President, R&D Engineering","Mastercard","August 31, 2026","https://www.linkedin.com/in/rajeev-gangal-0aa1822/"],
+["Ravikumar Manchi","Vice President","Goldman Sachs","August 31, 2026","https://www.linkedin.com/in/manchiravi/"],
+["Shrish Tripathi","Director - Engineering & Architecture","EY","August 31, 2026","https://www.linkedin.com/in/shrish-tripathi-34681740/"],
+["Gurpinder Singh","Managing Director, Global Marketing Ops (Life Sciences)","Accenture","August 31, 2026","https://www.linkedin.com/in/gurpindersingh/"],
+["Anand Akhouri","Director, Ernst & Young","EY","August 31, 2026","https://www.linkedin.com/in/anandakhouri/"],
+["Pradeep Gorai","Managing Director","Deloitte","August 31, 2026","https://www.linkedin.com/in/pradeep-gorai-72159315/"],
+["Rohit Jain","Director","Deloitte","August 31, 2026","https://www.linkedin.com/in/rohitft/"],
+["Megha Sinha","Director, AI & Data","Accenture","August 30, 2026","https://www.linkedin.com/in/megha-sinha/"],
+["Neeraj Godiyal","Director of Product Management","Mastercard","August 30, 2026","https://www.linkedin.com/in/neeraj-godiyal-65477328/"],
+["Anuj Agarwal","Senior Director","Capgemini","August 30, 2026","https://www.linkedin.com/in/theagarwal/"],
+["Shaakun Khanna","Managing Director","Accenture","August 30, 2026","https://www.linkedin.com/in/shaakunkhanna/"],
+["Atul Chanani","Head of Global Finance - India GCC, Director","Citi","August 30, 2026","https://www.linkedin.com/in/atul-chanani-b4baa04/"],
+["Rakesh Venkatachalam","Associate Director","Deloitte","August 29, 2026","https://www.linkedin.com/in/rakeshvenkatachalam/"],
+["Sreejith Nair","Associate Director, Brand, Marketing and Communications","EY","August 29, 2026","https://www.linkedin.com/in/mrsreejithnair/"],
+["Parag Pol","Vice President Data Scientist","Mastercard","August 29, 2026","https://www.linkedin.com/in/paragpol/"],
+["Deeptesh Chande","Senior Vice President (Executive Director), Global Head of PWM Enterprise Services Operations","Goldman Sachs","August 29, 2026","https://www.linkedin.com/in/deepteshchande/"],
+["Akhil Bajaj","Director - Strategy, Risk & Transactions","Deloitte","August 29, 2026","https://www.linkedin.com/in/akhilbajaj/"],
+["Abhishek Das","Associate Director","PwC","August 29, 2026","https://www.linkedin.com/in/abhishekdas93/"],
+["Deepa Rajesh (She/Her/Hers)","Vice President","Goldman Sachs","August 28, 2026","https://www.linkedin.com/in/deepa-rajesh-she-her-hers-38103a9/"],
+["Harihar Mohapatra","Director-Engineering, AI & Data","Deloitte","August 28, 2026","https://www.linkedin.com/in/harihar-mohapatra/"],
+["Biswanath Kumar","Vice President","Goldman Sachs","August 28, 2026","https://www.linkedin.com/in/biswanath-kumar-05a56718/"],
+["Meera Srinivasan","Vice President - AI, Automation & Industrialization","Capgemini","August 27, 2026","https://www.linkedin.com/in/meerasrinivasan/"],
+["Sourabh Mukherjee","Head of AI & Data Strategy and Modernization","Accenture","August 27, 2026","https://www.linkedin.com/in/sourabhmukherjee/"],
+["Souvik Das","Principal Director - Digital Strategy & Industry Leader","Accenture","August 27, 2026","https://www.linkedin.com/in/dsouvik/"],
+["Sudeep Behari","Director | Head of Credit Cards, India","HSBC","August 27, 2026","https://www.linkedin.com/in/sudeep-behari-3651a19/"],
+["Kiran Pisapati","Head of Finance Transformation CoE","HSBC","August 27, 2026","https://www.linkedin.com/in/kiran-pisapati/"],
+["Anuja Kolhe","Vice President - Quality Engineering","Citi","August 27, 2026","https://www.linkedin.com/in/anujakolhe/"],
+["Tushar Kakade","Director | Global Head of Operations Post-Trade (Debt & Equities) and Asset Services Technology","HSBC","August 27, 2026","https://www.linkedin.com/in/tushar-kakade-48724b6/"],
+["Devishree K","Sr Recruiter","Visa","August 27, 2026","https://www.linkedin.com/in/devishree-k/"],
+["Ramesh Padala","Managing Director","Boston Consulting Group (BCG)","August 26, 2026","https://www.linkedin.com/in/ramesh-padala/"],
+["Amit Khurana","Sr. Director and Brand Head, Capgemini India","Capgemini","August 26, 2026","https://www.linkedin.com/in/amitkhuranaiitr/"],
+["SIRISHA RP","Pillar Lead – Recruitment Coordinator","Goldman Sachs","August 26, 2026","https://www.linkedin.com/in/sirisha-rp-95bb571b9/"],
+["Major Pradeep Muthuswamy","Associate Director","Accenture","August 26, 2026","https://www.linkedin.com/in/pradeep-muthuswamy/"],
+["Gautam Aggarwal","President, India & South Asia","Mastercard","August 26, 2026","https://www.linkedin.com/in/gautamagg/"],
+["Mallika Fernandes","Managing Director","Accenture","August 25, 2026","https://www.linkedin.com/in/mallika-fernandes/"],
+["Saurabh Thukral","Partner - Global Managed Services","EY","August 25, 2026","https://www.linkedin.com/in/saurabh-thukral-9b2605/"],
+["Govinda Rao Moningi - GMS®, EA, Prince2®","Associate Director - US GMS","KPMG","August 25, 2026","https://www.linkedin.com/in/govinda-rao-moningi/"],
+["Gopal Raje Urs","Director","KPMG","August 25, 2026","https://www.linkedin.com/in/gopal-raje-urs-70162018/"],
+["Kaushik Banerjee","Vice President - ServiceNow Business Group","Accenture","August 25, 2026","https://www.linkedin.com/in/kaushik-banerjee-7674783/"],
+["Labeeb Badri","Senior Leader | Executive Director","Goldman Sachs","August 25, 2026","https://www.linkedin.com/in/labeeb-badri-b0a23757/"],
+["Paramjyot Singh","Managing Director, Strategy & Consulting","Accenture","August 25, 2026","https://www.linkedin.com/in/paramjyot-singh-90707823/"],
+["Abhishek Pacheriwala","Senior Vice President","Citi","August 25, 2026","https://www.linkedin.com/in/abhishek-pacheriwala/"],
+["Tarun Kumar","Senior Vice President (Operations Senior Leader)","Goldman Sachs","August 24, 2026","https://www.linkedin.com/in/tarun-kumar-56b43b77/"],
+["Stuti Goyal","Director - Global Strategy & Operations, Legal","Boston Consulting Group (BCG)","August 24, 2026","https://www.linkedin.com/in/stuti-goyal-india/"],
+["Satya Sudipta Padhiary","Vice President & Business Head Digital, Fintech and Merchants (Ecom & Retail)","Mastercard","August 24, 2026","https://www.linkedin.com/in/satyasudiptapadhiary/"],
+["CA SAURABH GUPTA","Vice President - Finance Operations","HSBC","August 24, 2026","https://www.linkedin.com/in/saurabhguptaca/"],
+["Niveditha Narayanan","Vice President","Goldman Sachs","August 24, 2026","https://www.linkedin.com/in/niveditha-narayanan-96985987/"],
+["Ravi Nanduri","Vice President | Real Estate Services | GSC","HSBC","August 24, 2026","https://www.linkedin.com/in/ravinanduri/"],
+["YOGESHWAR BHAVE","Director","Capgemini","August 24, 2026","https://www.linkedin.com/in/yogeshwar-bhave-423784117/"],
+["Vikram Ramarajan","Senior Director - Operations, Business Transformation & Innovation","Capgemini","August 24, 2026","https://www.linkedin.com/in/vikram-ramarajan-32224415/"],
+["Divya A. Seth","Associate Director","KPMG","August 24, 2026","https://www.linkedin.com/in/divya-a-seth-735a3883/"],
+["Richa Agrawal","Global IT Director - Data Architecture","Boston Consulting Group (BCG)","August 24, 2026","https://www.linkedin.com/in/richa-agrawal-csm-safe/"],
+["Anshul Sharma","Vice President Strategic Innovation","HSBC","August 24, 2026","https://www.linkedin.com/in/anshul-sharma-606b3026/"],
+["Sujata Yeole","Associate Director, Portfolio Data Analyst","HSBC","August 24, 2026","https://www.linkedin.com/in/sujata-rajesh-yeole-it-project-manager/"],
+["Sachin Kapur","Director Business Transformation","Accenture Services Limited","August 24, 2026","https://www.linkedin.com/in/sachinkapur-digital-transformation-agenticai/"],
+["Punit Santani","COO, Insights and Data, India","Capgemini","August 23, 2026","https://www.linkedin.com/in/punit-santani-930bb51/"],
+["Libertin Fernando","Recruitment Partner","Morgan Stanley","August 23, 2026","https://www.linkedin.com/in/libertin-fernando-2a875625/"],
+["Rajaram Krishnamoorthy","Vice President","Goldman Sachs","August 23, 2026","https://www.linkedin.com/in/rajaram-krishnamoorthy-5baa2523/"],
+["Harvinder Singh Minhas","Vice President & Head - Alliances Sales","Accenture","August 22, 2026","https://www.linkedin.com/in/harvindersminhas/"],
+["Piyush Jain","Growth & Operating Leader","Mckinsey & Company","August 22, 2026","https://www.linkedin.com/in/piyushjain1101/"],
+["Piyush Jain","Senior Software Engineer (VP)","Not specified","August 22, 2026","https://www.linkedin.com/in/piyushjain1101/"],
+["Vismay Jani","Managing Director & Global Lead for Integrated Supply Chain Planning","Accenture","August 22, 2026","https://www.linkedin.com/in/vismayjani/"],
+["Piyush Manocha","Managing Director | S&C | Ind X | UKI - Market Integration Lead | Data & AI Co-Lead (S&C)","Accenture","August 22, 2026","https://www.linkedin.com/in/manochapiyush/"],
+["Shankar Muthukumar","Executive Director - AI and Data","EY","August 22, 2026","https://www.linkedin.com/in/shankar-muthukumar/"],
+["Maayank Wahi","Managing Director","Accenture","August 21, 2026","https://www.linkedin.com/in/mayankwahi/"],
+["Ankur Chaudhary","Managing Director and Products Client Group Lead for India Market Unit","Accenture","August 21, 2026","https://www.linkedin.com/in/ankur-chaudhary-7b9268/"],
+["Pravanjan Patra","Vice President - Machine Learning, AI, Gen AI","Citi","August 21, 2026","https://www.linkedin.com/in/pravanjan-patra/"],
+["Subhadra Sarangi","HR Service Delivery Senior Analyst","Accenture","August 20, 2026","https://www.linkedin.com/in/subhadra-sarangi-78239966/"],
+["Shalini Lahiri","Associate Director – CPO's Office","Deloitte","August 20, 2026","https://www.linkedin.com/in/shalinilahiri/"],
+["Madhyama Thakur","Vice President","Goldman Sachs","August 20, 2026","https://www.linkedin.com/in/madhyama-thakur/"],
+["Shaik Khadeer Ahmed","Vice President - Product Manager","Goldman Sachs","August 20, 2026","https://www.linkedin.com/in/shaik-khadeer-ahmed-43462413/"],
+["Mallikarjun BM","Vice President - Linux Engineering","Goldman Sachs","August 20, 2026","https://www.linkedin.com/in/mallikarjunbm/"],
+["Suchit Tripathy","Director – Technology & Transformation","Deloitte","August 20, 2026","https://www.linkedin.com/in/suchit-tripathy/"],
+["Yasser Hussain","Vice President","Goldman Sachs","August 20, 2026","https://www.linkedin.com/in/y-hussain/"],
+["Anuradha Nath","MD, India Technology CAO, Global C","Morgan Stanley","August 20, 2026","https://www.linkedin.com/in/anuradha-nath-6185613/"],
+["Harshit Varshney","Vice President","Goldman Sachs","August 19, 2026","https://www.linkedin.com/in/harshit-varshney-688686114/"],
+["Vijay Jain, MBA, MCom, CAMS, CAME","Executive Director","Morgan Stanley","August 19, 2026","https://www.linkedin.com/in/vijayjaincams/"],
+["Swayta Murarka","Managing Director","HSBC","August 19, 2026","https://www.linkedin.com/in/swayta-murarka-8b8a7b32/"],
+["Kunal Sharma","Vice President","Goldman Sachs","August 19, 2026","https://www.linkedin.com/in/kunal-sharma-0a351613a/"],
+["Rajdeep Singh","Director, Brand Marketing and Communications (Services and Solutions)","EY","August 19, 2026","https://www.linkedin.com/in/rajdeepsinghsaini/"],
+["Amit Kumar","Director | AI, Analytics & Responsible AI","Deloitte","August 18, 2026","https://www.linkedin.com/in/amit-kumar-8553408/"],
+["Shireen Ali","Director","HSBC","August 18, 2026","https://www.linkedin.com/in/shireena/"],
+["Satendra Singh","Director, Corporate Relationships, North India, IWPB","HSBC","August 18, 2026","https://www.linkedin.com/in/satendra-singh-956168a/"],
+["Mou Chakravorty","Director Marketing Communications","Deloitte","August 18, 2026","https://www.linkedin.com/in/mouchakravorty/"],
+["Parived Bhatnagar","Human Resources Director: Head HR for Delhi (Gurugram, Noida, Jaipur centers) & Chennai","Accenture","August 18, 2026","https://www.linkedin.com/in/parived-bhatnagar-9879254/"],
+["Siddhartha Tripathi","Director – Global Competency Center","KPMG India","August 18, 2026","https://www.linkedin.com/in/siddtripathi/"],
+["Shailesh Bhandarkar","Vice President","Goldman Sachs","August 18, 2026","https://www.linkedin.com/in/shailesh-bhandarkar-76970016/"],
+["Nidhi Gupta","Vice President","Goldman Sachs","August 17, 2026","https://www.linkedin.com/in/nidhi-gupta-3b818523/"],
+["Sreedhar Joshi","Vice President","Goldman Sachs","August 17, 2026","https://www.linkedin.com/in/sreedharjoshi/"],
+["Natish Shah","Vice President Regulatory Reporting Transformation & Project Management","Goldman Sachs","August 17, 2026","https://www.linkedin.com/in/natishshah/"],
+["Nandakumar Chandrasekharan","Vice President","Goldman Sachs","August 17, 2026","https://www.linkedin.com/in/nandakumarchandrasekharan/"],
+["Subhajit Mukherjee","Vice President","Goldman Sachs","August 17, 2026","https://www.linkedin.com/in/subhajit2809/"],
+["Zain Inhonvi","Vice President – HCM","Goldman Sachs","August 17, 2026","https://www.linkedin.com/in/zaininhonvi/"],
+["Gurpreet Singh","Senior Vice President - Network, Wealth and Personal Banking","HSBC","August 16, 2026","https://www.linkedin.com/in/gurpreet-singh-4b27358/"],
+["Sanyam Goyal","Managing Director","Goldman Sachs","August 16, 2026","https://www.linkedin.com/in/sanyamgoyal/"],
+["Avinash Garg","Vice President","Goldman Sachs","August 15, 2026","https://www.linkedin.com/in/avinash-garg-b203b9175/"],
+["Kunal Borse","Vice President","Goldman Sachs","August 15, 2026","https://www.linkedin.com/in/kunal-borse-leo/"],
+["David Hill","CEO | Deloitte South Asia","Deloitte Aisa Pacific","August 15, 2026","https://www.linkedin.com/in/davidmarkhill/"],
+["Harun Pathan","Vice President","Goldman Sachs","August 15, 2026","https://www.linkedin.com/in/hpathan/"],
+["Yogalakshmi Manohar","Deputy Manager – HR","Deloitte","August 14, 2026","https://www.linkedin.com/in/yogalakshmi-manohar-4b360341/"],
+["Abhas Rohatgi","Vice President","Goldman Sachs","August 14, 2026","https://www.linkedin.com/in/abhasrohatgi/"],
+["Keshav Rao","Vice President Cyber Security","Goldman Sachs","August 14, 2026","https://www.linkedin.com/in/keshav-rao-6372181b/"],
+["Rajendra Kapse","Vice President, Engineering","Goldman Sachs","August 14, 2026","https://www.linkedin.com/in/rajendrakapse/"],
+["Prachi Misra","Vice President","Goldman Sachs","August 13, 2026","https://www.linkedin.com/in/prachimisra/"],
+["Abhinay Kumar","Vice President","Goldman Sachs","August 13, 2026","https://www.linkedin.com/in/abhinaykumar42/"],
+["Mohammed Taheer Adam","Vice President of Products","Goldman Sachs","August 13, 2026","https://www.linkedin.com/in/mohammed-taheer-adam/"],
+["Karan Shukla","Vice President","Goldman Sachs","August 13, 2026","https://www.linkedin.com/in/karan-shukla-6210b510b/"],
+["MAHESH Krishnamoorthy","Associate Director - CTO Data Technology","HSBC","August 13, 2026","https://www.linkedin.com/in/maheshkrish/"],
+["Rahul Singh, PMP®, AI Empowered SAFe® Product Leader","Vice President - Work Force Management (WFM) - Product Manager","HSBC","August 13, 2026","https://www.linkedin.com/in/rahul-singh-pmp%C2%AE-ai-empowered-safe%C2%AE-product-leader-3a9253bb/"],
+["Rahul Jain","India Head - Boston Consulting Group","Boston Consulting Group","August 13, 2026","https://www.linkedin.com/in/rahul-jain-25127b4/"],
+["Ramesh Komuravelli","AVP, Talent Acquisition","HSBC","August 13, 2026","https://www.linkedin.com/in/rameshkomuravelli/"],
+["Nagajyothi D","Senior Vice President","Goldman Sachs","August 13, 2026","https://www.linkedin.com/in/nagajyothi-d-0a8346142/"],
+["Yashika Arora","Global L&D Assistant","Boston Consulting Group (BCG)","August 12, 2026","https://www.linkedin.com/in/yashika-arora-2260b11b2/"],
+["Balaji Vankayala, FRM","Vice President – Asset & Wealth Management","Goldman Sachs","August 12, 2026","https://www.linkedin.com/in/balaji-vankayala-frm-29607913/"],
+["Vivek Shah","Vice President","Goldman Sachs","August 12, 2026","https://www.linkedin.com/in/viveknshah/"],
+["Madan Mohan Saha","Executive Director","AQR Capital Management","August 12, 2026","https://www.linkedin.com/in/madan-mohan-saha/"],
+["Pravin Patil","Vice President","Morgan Stanley","August 12, 2026","https://www.linkedin.com/in/pravin-patil-9b28b21b/"],
+["Aneesh Saraiya","Senior Director, Bain & Company (Private Equity Group)","Bain & Company","August 11, 2026","https://www.linkedin.com/in/aneeshsaraiya/"],
+["Prabhu B N","Associate Talent Acquisition","Morgan Stanley","August 11, 2026","https://www.linkedin.com/in/prabhu-b-n-2262235b/"],
+["Tanmaya Kumar Rout","Vice President of Software Engineering","Goldman Sachs","August 11, 2026","https://www.linkedin.com/in/tanmaya-kumar-rout-760a80149/"],
+["Kumar Prateek","Vice President","Goldman Sachs","August 11, 2026","https://www.linkedin.com/in/kumar-prateek/"],
+["Vipul Agrawal","Vice President","Blackstone","August 11, 2026","https://www.linkedin.com/in/vipul-agrawal-7b4a2013/"],
+["Pratheek Pramod","Vice President","Goldman Sachs","August 11, 2026","https://www.linkedin.com/in/pratheek-pramod/"],
+["Harsh Mankad","Sr Vice-President (Operations Senior Leader) – Global Banking & Markets","Goldman Sachs","August 11, 2026","https://www.linkedin.com/in/harshmankad/"],
+["Subhankar Mitra (He/Him/His)","Senior Vice President – Operations Senior Leader (OSL)","Goldman Sachs","August 10, 2026","https://www.linkedin.com/in/subhankar-mitra-he-him-his-03498613/"],
+["Anand Naik","Director","Morgan Stanley","August 10, 2026","https://www.linkedin.com/in/anand-naik-409b17b1/"],
+["Alkama Raj","Associate Director – Human Resources","KPMG India","August 10, 2026","https://www.linkedin.com/in/alkama-raj-9440b913/"],
+["Ankur Sapra","Director, Advanced Manufacturing & Services CoE","Bain & Company","August 10, 2026","https://www.linkedin.com/in/ankur-sapra-6b885615/"],
+["Abhisek Nayak","Director – AI Enabled Data Strategy Platforms, Data Quality Engineering & Cloud Transformation","Morgan Stanley","August 10, 2026","https://www.linkedin.com/in/abhiseknayak1991/"],
+["Kamal Yadav","Managing Director","Morgan Stanley","August 10, 2026","https://www.linkedin.com/in/kamalyadav/"],
+["Snehal Shelar","Senior Specialist – HR Services","Mastercard","August 9, 2026","https://www.linkedin.com/in/snehal-shelar-04586528/"],
+["Shaamlie Anggane","Executive Director","Morgan Stanley","August 8, 2026","https://www.linkedin.com/in/shaamlie-anggane-81201713/"],
+["Ajay Arora","Vice President","Morgan Stanley","August 8, 2026","https://www.linkedin.com/in/ajay-arora-a62ab12b/"],
+["Ankur Pathak","Executive Advisor - Enterprise Technology & Business Transformation","Independent Advisory","August 8, 2026","https://www.linkedin.com/in/ankurpathakisb/"],
+["Anurag Mishra","Executive Director","Morgan Stanley","August 8, 2026","https://www.linkedin.com/in/anurag-mishra-a95149b/"],
+["Pranavi Ayer","Human Resources Administrator","EY","August 7, 2026","https://www.linkedin.com/in/pranavi-ayer-b1053a376/"],
+["ASHISH KUMAR","Manager – HR Business Analyst (Global)","HSBC","August 7, 2026","https://www.linkedin.com/in/ashish-kumar-84bb073b/"],
+["Suvid Juvekar","Executive Director","Morgan Stanley","August 7, 2026","https://www.linkedin.com/in/suvid-juvekar-51427a128/"],
+["Adarsh Tandon","AVP Business Training","HSBC Electronic Data Processing India Pvt. Ltd.","August 7, 2026","https://www.linkedin.com/in/adarsh-tandon-85430b10/"],
+["Kesavan Ramasamy","Vice President","Morgan Stanley","August 7, 2026","https://www.linkedin.com/in/kesavanramasamy/"],
+["Sourabh Malhotra","VP Risk & Governance","Morgan Stanley","August 7, 2026","https://www.linkedin.com/in/sourabh-malhotra-86604b8/"],
+["Dipanwita Bhattacharjee","Executive Director","Morgan Stanley","August 7, 2026","https://www.linkedin.com/in/dipanwita-bhattacharjee-9a748811/"],
+["Arijit Das, CQF, RAI","Executive Director","MSCI Inc.","August 7, 2026","https://www.linkedin.com/in/orijitdas/"],
+["Dharmachandra Chandrasekaran","Human Resources Consultant","Morgan Stanley","August 6, 2026","https://www.linkedin.com/in/dharmac06/"],
+["Abinash Panigrahi","Asst. Vice President Executive Compensation","HSBC","August 6, 2026","https://www.linkedin.com/in/abinash-panigrahi-4122543b/"],
+["Manjunath G V","Director, Talent Insights & Analytics at EY 3 yrs 6 mos","Not Visible","August 5, 2026","https://www.linkedin.com/in/manjunathgujrathi/"],
+["Soni Pal","Senior Director Human Resources Business Partner","Morgan Stanley","August 5, 2026","https://www.linkedin.com/in/soni-pal/"],
+["Soni Pal","Senior Director Human Resources Business Partner","Morgan Stanley","August 5, 2026","https://www.linkedin.com/in/soni-pal/"],
+["Vishnupriya Sharma","Global L&D Assistant","Boston Consulting Group (BCG)","August 5, 2026","https://www.linkedin.com/in/vishnupriya-sharma/"],
+["Sourav Maiti","Manager – Data and Analytics","HSBC","August 5, 2026","https://www.linkedin.com/in/souravmaiti/"],
+["Rakhi Saha","Talent Intelligence Manager","Boston Consulting Group (BCG)","August 5, 2026","https://www.linkedin.com/in/rakhi-saha-80872b93/"],
+["Nazia Tauheed","Talent Acquisition Senior Recruiter","Morgan Stanley","August 4, 2026","https://www.linkedin.com/in/nazia-tauheed-61311547/"],
+["Venkat Aditya Appala","Delivery Director - Strategic Business Change","HSBC","August 4, 2026","https://www.linkedin.com/in/venkataditya/"],
+["Hemant R Sharma","Director HR Program Management","Mastercard","August 4, 2026","https://www.linkedin.com/in/hemant-r-sharma-a953871a/"],
+["Deven Tiwari, CISM, CRISC, CISA, AWS, ECSA, CEH","Associate Director, Cybersecurity","HSBC","August 4, 2026","https://www.linkedin.com/in/deven-tiwari-cism-crisc-cisa-aws-ecsa-ceh-a91617184/"],
+["Sumiti Chitkara","Talent Acquisition Specialist","Boston Consulting Group (BCG)","August 4, 2026","https://www.linkedin.com/in/sumiti-chitkara/"],
+["Aarti Dahiya","Sr. Associate Director - Human Resource (HR) Data Architecture","HSBC","August 4, 2026","https://www.linkedin.com/in/aarti-dahiya-80a07538/"],
+["Gulfam Ahmad, MBA","Assistant Vice President - People Analytics, AI & Automation","HSBC","August 4, 2026","https://www.linkedin.com/in/gulfam-ahmad-mba-b9828558/"],
+["Gaurav Singh Panwar, GPHR®","Vice President Human Resources","HSBC","August 3, 2026","https://www.linkedin.com/in/gauravsinghpanwar/"],
+["Tanvi Agaskar","Direct Recruiter","Morgan Stanley","August 3, 2026","https://www.linkedin.com/in/tanvi-agaskar-508428175/"],
+["Prabhat Jain, FCA","Mumbai Head - Technology Risk","Morgan Stanley","August 3, 2026","https://www.linkedin.com/in/prabhatjain-fca/"],
+["Amit Pandey","Vice President Operations Technology","Morgan Stanley","August 3, 2026","https://www.linkedin.com/in/amitkrpandey1408/"],
+["Siddhi Agrawal","Associate Director - Technology Risk & Control","HSBC","August 3, 2026","https://www.linkedin.com/in/siddhiagrawal763/"],
+["Monurup Borgohain","Vice President - Employee Relations","HSBC","August 3, 2026","https://www.linkedin.com/in/monurupb/"],
+["Muthuselvi Murugan","Recruitment Partner","Morgan Stanley","August 1, 2026","https://www.linkedin.com/in/muthuselvi-murugan-5063997a/"],
+["Harshita Sharma","Senior HR Recruiter","BFSI connect","August 1, 2026","https://www.linkedin.com/in/harshita-sharma-264b20227/"],
+["Niharika Garg","Human Resources Specialist","Boston Consulting Group (BCG)","August 1, 2026","https://www.linkedin.com/in/niharika-garg-26a097183/"],
+["Mitali Prajapati","Recruiter","BFSI connect","August 1, 2026","https://www.linkedin.com/in/mitali-prajapati-9b30aa279/"],
+["Mahima Chauhan","Global People Analytics Manager","Boston Consulting Group (BCG)","July 31, 2026","https://www.linkedin.com/in/mahimachauhan/"],
+["Vijay Kumar Yadav","Senior Payroll Analyst","Mastercard","July 31, 2026","https://www.linkedin.com/in/vijay-kumar-yadav-jnp/"],
+["Shruti Shatakshi","Recruiting Assistant","Boston Consulting Group (BCG)","July 31, 2026","https://www.linkedin.com/in/shruti-shatakshi-517478163/"],
+["Drashti Saraiya","Human Resources Recruiter","BFSI connect","July 31, 2026","https://www.linkedin.com/in/drashti-saraiya-439806265/"],
+["Pragati .","Global Learning and Development Specialist","Boston Consulting Group (BCG)","July 30, 2026","https://www.linkedin.com/in/pragati-663451139/"],
+["Srishti Rani","Talent Acquisition Specialist","Morgan Stanley","July 30, 2026","https://www.linkedin.com/in/srishtir/"],
+["Hinal Mehta","HR Executive","Morgan Stanley","July 30, 2026","https://www.linkedin.com/in/hinal-mehta-18333113a/"],
+["Vineet Thakkar","Recruiting Consultant","Morgan Stanley","July 29, 2026","https://www.linkedin.com/in/vineet-thakkar-0714a9117/"],
+["Aadi Mehrotra","Global Learning Operations Graduate Trainee","Boston Consulting Group (BCG)","July 29, 2026","https://www.linkedin.com/in/aadi-mehrotra-8503811b1/"],
+["Saloni Agarwal","Global Services Human Resources Assistant","Boston Consulting Group (BCG)","July 29, 2026","https://www.linkedin.com/in/saloni-agarwal-5469a411b/"],
+["Ritesh Kumar","Associate Director – HR Operations & Global Mobility","KPMG Global Services (KGS)","July 29, 2026","https://www.linkedin.com/in/mr-ritesh-kumar/"],
+["Priya Aneesh","Senior Director","PwC","July 29, 2026","https://www.linkedin.com/in/priyaaneesh/"],
+["Shubham Thakur","Global Talent Acquisition Specialist","Boston Consulting Group (BCG)","July 28, 2026","https://www.linkedin.com/in/shubham-thakur-96b59012a/"],
+["Ridhima Anand","Learning and Development Specialist","The Boston Consulting Group (BCG)","July 28, 2026","https://www.linkedin.com/in/ridhima-anand-004166143/"],
+["Shipra Singh","Assistant Manager – HR","Deloitte","July 27, 2026","https://www.linkedin.com/in/shipra-singh-20643875/"],
+["Anurag Awasthi","Global People Analytics Manager – Business Services","Boston Consulting Group (BCG)","July 27, 2026","https://www.linkedin.com/in/anurag-awasthi-37736915/"],
+["Arpita Dhara","Resource Manager","Capgemini","July 26, 2026","https://www.linkedin.com/in/arpita-dhara-48644b214/"],
+["Hemani Mohan","Associate Talent Acquisition Partner","American Express","July 26, 2026","https://www.linkedin.com/in/hemani-mohan-6b5482124/"],
+["Neha Khera","HR Business Partner","Accenture","July 26, 2026","https://www.linkedin.com/in/neha-khera/"],
+["Mayank Khurana","Associate Director - Organization Systems & Automation","S&P Global","July 25, 2026","https://www.linkedin.com/in/mayank-khurana-b88564103/"],
+["Arshiya Singh (Ph.D.)","Director Global Compensation","Boston Consulting Group (BCG)","July 25, 2026","https://www.linkedin.com/in/arshiya89/"],
+["Mohammed Aseem","Specialist","Accenture India Pvt Ltd","July 24, 2026","https://www.linkedin.com/in/mohammed-aseem-31b96514b/"],
+["Chandan Bala","Director - Human Resources (Employee Relations & Policies)","Accenture","July 23, 2026","https://www.linkedin.com/in/chandan-bala-a685572/"],
+["Simna Krishnan","Manager – Workforce Capability, Learning & HR Transformation","Accenture","July 23, 2026","https://www.linkedin.com/in/simna-krishnan/"],
+["BVS SRIRAM","HR Partner Analyst","Accenture","July 23, 2026","https://www.linkedin.com/in/bvs-sriram-32202315b/"],
+["Shalu Rachel","HR Business Partner Analyst","Accenture","July 23, 2026","https://www.linkedin.com/in/shalu-rachel-013319178/"],
+["Harsh Vardhan Maheswari","Director Human Resources | HRBP Lead – Enterprise Platforms, Accenture Technology India","Accenture","July 22, 2026","https://www.linkedin.com/in/harshvardhanmaheswari/"],
+["Saloni Agarwal, SHRM-SCP","HR Business Partner – Technology, Analytics and Product","American Express","July 22, 2026","https://www.linkedin.com/in/saloni-agarwal-shrm-scp-ab54a9b6/"],
+["Shaswat Mohanty","Associate Director – Talent Advisor","Deloitte","July 22, 2026","https://www.linkedin.com/in/shaswat-mohanty-66798940/"],
+["Shishir Srivastava","Director - Workday / PeopleSoft Practice Lead","Capgemini","July 21, 2026","https://www.linkedin.com/in/shishir-srivastava-erp/"],
+["Resham L","Human Resources Leader - India Business","Accenture","July 21, 2026","https://www.linkedin.com/in/resham-l-malhotra/"],
+["Shubham Bhardwaj","Vice President - Global HR Transformation","Accenture","July 21, 2026","https://www.linkedin.com/in/shubhambhardwaj2018/"],
+["Syed Mohammed Aamir","Director - HR Business Partner","Capgemini","July 21, 2026","https://www.linkedin.com/in/syed-mohammed-aamir-87b8a112/"],
+["Kamalpreet Singh","Vice President – Talent Acquisition","Deloitte","July 20, 2026","https://www.linkedin.com/in/kamalpreet-singh-a178376/"],
+["D Paul","Senior Human Resources Business Partner","EY","July 18, 2026","https://www.linkedin.com/in/d-paul-66051a117/"],
+["Divya Chinappa","Associate Director – Learning & Development","Deloitte","July 18, 2026","https://www.linkedin.com/in/divya-chinappa/"],
+["Archana Behl","Director – Learning & Development","Deloitte","July 17, 2026","https://www.linkedin.com/in/archana-behl-1a29b186/"],
+["Ashika Belliappa","Associate Director – Talent","Deloitte","July 16, 2026","https://www.linkedin.com/in/ashika-belliappa-3264551a8/"],
+["Saptarshi Chatterjee","Associate Partner – Human Capital Advisory Solutions","KPMG India","July 14, 2026","https://www.linkedin.com/in/saptarshichatterjee/"],
+["Tanvi Thacker","Executive Director – Talent","Deloitte India","July 14, 2026","https://www.linkedin.com/in/tanvithacker/"],
+["Mithun Jose","Assistant Director - Talent Attraction & Acquisition","EY","July 13, 2026","https://www.linkedin.com/in/mithun-jose-5a36b313b/"],
+["Pradeep Kumar (SHRM-SCP)","Executive Director – HR Transformation","Deloitte","July 13, 2026","https://www.linkedin.com/in/pradeep-kumar-shrm/"],
+["Anchall Sharma","Director – Talent","Deloitte","July 13, 2026","https://www.linkedin.com/in/anchall-sharma-0310937/"],
+["Shankar D","Assistant Director - Talent Consultant","EY","July 11, 2026","https://www.linkedin.com/in/shankar-d-4355a268/"],
+["Nuthan Prasad","Assistant Director - Employee Relations","EY","July 10, 2026","https://www.linkedin.com/in/nuthan-prasad-76b31a108/"],
+["Payal Sen","HR at Bain & Company | IIM-Raipur, RVCE | Jombay top HR 30under30","Bain & Company","July 10, 2026","https://www.linkedin.com/in/payal-sen-a63572b2/"],
+["Shilpa Subbaiah","Chief Operating Officer","Morgan Stanley","July 10, 2026","https://www.linkedin.com/in/shilpa-subbaiah-92835a1/"],
+["Sreeraj R","Human Resources Business Partner","EY","July 9, 2026","https://www.linkedin.com/in/sreeraj-r-srhrbp/"],
+["Kumar Shashank (Thakur)","HR Business Partner","EY","July 9, 2026","https://www.linkedin.com/in/shashank-kumar2501/"],
+["Kumar Shashank (Thakur)","HR Business Partner","EY","July 9, 2026","https://www.linkedin.com/in/shashank-kumar2501/"],
+["Naveen Kutty","Associate Vice President","Deloitte India","July 9, 2026","https://www.linkedin.com/in/naveen-kutty/"],
+["Vasantharajan S","Vice President - People Analytics & Insights","Citi","July 7, 2026","https://www.linkedin.com/in/itzvasanth/"],
+["Arunkumar Vasanthakumar","Director - Global Mobility and GigNow Program","EY GDS","July 7, 2026","https://www.linkedin.com/in/arunkumar-vasanthakumar-30458538/"],
+["Veena Ravichandran (ACC ICF)","Head of Learning - GDS Tax Talent Development","EY","July 6, 2026","https://www.linkedin.com/in/veena-ravichandran-acc-icf-030a2998/"],
+["Syed Shahid","Vice President - HR DG","Citi","July 6, 2026","https://www.linkedin.com/in/syed-shahid-64abab307/"],
+["Vivek Nair","Assistant Director - Talent Development","EY","July 6, 2026","https://www.linkedin.com/in/vivek--nair/"],
+["Jerry Bhadran","Assistant Director of Talent Acquisition","EY","July 5, 2026","https://www.linkedin.com/in/jerry-bhadran-b057458b/"],
+["Aditi Madan","Assistant Director - Global Learning","EY","July 4, 2026","https://www.linkedin.com/in/aditimadan/"],
+["Anil Chikkaveeriah","Associate Director - Talent Acquisition and Attraction","EY","July 3, 2026","https://www.linkedin.com/in/anil-chikkaveeriah/"],
+["Vishal Chinchure","Asst Director - Talent Attraction and Acquisition Lead","EY","July 3, 2026","https://www.linkedin.com/in/vishal-chinchure/"],
+["Manu Variar","HR Leader @ Morgan Stanley | Rewards Lead, HR","Morgan Stanley","June 22, 2026","https://www.linkedin.com/in/manu-variar-33b7825/"],
+["Mahendra Itkarkar","Executive Director, Chief Operating","Morgan Stanley","June 22, 2026","https://www.linkedin.com/in/mahendra-itkarkar-2683bb8/"],
+["Saritha Bhaskar","Vice President Human Resource @ Morgan","Morgan Stanley","June 22, 2026","https://www.linkedin.com/in/saritha-bhaskar/"],
+["Pawan Setty","VP, Head of HR APAC – Technology | HR Transformation Leade","Visa","June 19, 2026","https://www.linkedin.com/in/pawan-setty-a255298/"],
+["Abhishek Bhattacharjee","HR professional at VISA","Visa","June 19, 2026","https://www.linkedin.com/in/abhishek-bhattacharjee-4629a915a/"],
+["Sumesh Suri","India Procurement Lead, Managing Director","Accenture India","June 18, 2026","https://www.linkedin.com/in/sumeshsuri/"],
+["Hetal Parmar","CFO-Ready Finance Leader | Executive Director – Morgan Stanley","Morgan Stanley","June 18, 2026","https://www.linkedin.com/in/hetal-parmar-89b70a23/"],
+["Manoj Gupte","India Head - Investment Management Technology, Experienced Financial","Morgan Stanley","June 17, 2026","https://www.linkedin.com/in/manoj-gupte-6397241/"],
+["Varsha Dilip","Human Resources @ Bain & Company","Bain & Company","June 16, 2026","https://www.linkedin.com/in/varsha-dilip-61bba9185/"],
+["Abhinav Dasgupta","Senior Director, Visa | Digital Payments, Consulting","Visa","June 15, 2026","https://www.linkedin.com/in/abhinav-dasgupta-99229114/"],
+["Nidhi Tiwari","Head of Visa Consulting and Analytics, India & South Asia","Visa","June 15, 2026","https://www.linkedin.com/in/nidhi-tiwari-000a804/"],
+["Pooja Patel","Director - Tech Partnerships at Visa","Visa","June 15, 2026","https://www.linkedin.com/in/pooja-patel-05229510b/"],
+["Neha Aggarwal","Lead Consumer Solutions, Visa India and South Asia","Visa","June 15, 2026","https://www.linkedin.com/in/neaggarwal/"],
+["Rishi A Chhabra","Managing Director and Country Manager","Visa","June 13, 2026","https://www.linkedin.com/in/rishichhabra/"],
+["Vaibhav Taranekar","VP - India South Asia & Southeast Asia and AP","Visa","June 13, 2026","https://www.linkedin.com/in/vaibhav-taranekar-a50b5916/"],
+["Ankit Agarwal","Chartered Accountant (All India Rank - 26) | CFO & Director (Finance)","Visa","June 12, 2026","https://www.linkedin.com/in/ankit-agarwal-1463984b/"],
+["Ramakrishnan Gopalan","Senior Leader in Payments and Lending Indust","Visa","June 12, 2026","https://www.linkedin.com/in/ramakrishnan-gopalan-a909062/"],
+["Pranay Singhvi","India Finance Executive Director at The Boston Consulting Group","Boston Consulting Group","June 11, 2026","https://www.linkedin.com/in/pranay-singhvi-08a3bbb/"],
+["Indu Sharma","Global Head of Talent and HR, BCN and GBS at Bain & Company","Bain & Company","June 9, 2026","https://www.linkedin.com/in/sharmaindu/"],
+["Abhay Bhanot","Sr. Director Finance -Bain | Ex- McKC | Ex PwC | Runner | Triathlete","Bain & Company","June 9, 2026","https://www.linkedin.com/in/abhay-bhanot-712b951b4/"],
+["Saurabh Paul","Senior Manager, Bain & Company","Bain & Company","June 8, 2026","https://www.linkedin.com/in/paulsaurabh/"],
+["Jahnavi Srivastava","Electrice Mobility - Manager","Capgemini Invent","June 8, 2026","https://www.linkedin.com/in/jahnavi-srivastava/"],
+["Abhishek Sharma","Director at Bain & Company | Enterprise Digital","Bain & Company","June 8, 2026","https://www.linkedin.com/in/linktoabhishek/"],
+["Balakrishnan Mahadevan","Asia Pacific Executive Director Finance at Boston Consulting Group","Boston Consulting Group","June 6, 2026","https://www.linkedin.com/in/balakrishnan-mahadevan-7209055/"],
+["Raghunath Rajan","Asia Pacific HR Senior Director","Boston Consulting Group","June 6, 2026","https://www.linkedin.com/in/raghunathrajan/"],
+["Sunny Nag","BCG ll Nokia ll Finance Transformation | Operating Model | CFO Excellence","Boston Consulting Group","June 5, 2026","https://www.linkedin.com/in/sunny-nag-6ab32256/"],
+["Venky Anant","Partner at Mckinsey & Company","Mckinsey & Company","June 3, 2026","https://www.linkedin.com/in/venkyanant/"],
+["Jaivir Singh","Vice Chairman & President","PwC","June 2, 2026","https://www.linkedin.com/in/jaivir-singh-3256a3b6/"],
+["Padmashree Shagrithaya","Executive Vice President & MD","Capgemini India","June 2, 2026","https://www.linkedin.com/in/padmashreesh/"],
+["Ashish Khare","COO","Mckinsey & Company","June 2, 2026","https://www.linkedin.com/in/ashishkhare1/"],
+["Neetu Payal","Manager Sourcing and Category Management","Accenture","June 2, 2026","https://www.linkedin.com/in/neetu-payal-436a7518/"],
+["Shailesh Goyal","Associate Director","Capgemini Invent","June 2, 2026","https://www.linkedin.com/in/shailesh-goyal/"],
+["Sarika Naik","Group Chief Corporate Responsibilitty Officer and Member of Group Executive Comittee","Capgemini India","June 1, 2026","https://www.linkedin.com/in/sarikanaik/"],
+["Vivek Srivastava","Managing Director @ PwC India","PwC","May 28, 2026","https://www.linkedin.com/in/srivivek/"],
+["Sumit Singhania","Partner and chief strategy officer","Deloitte","May 21, 2026","https://www.linkedin.com/in/sumit-singhania-ba9a1731/"],
+["Anandorup Ghose","Partner","Deloitte","May 21, 2026","https://www.linkedin.com/in/anandorup-ghose-1a7b3215a/"],
+["Krishnan L R","Director - Finance","Deloitte","May 21, 2026","https://www.linkedin.com/in/lrkrishnan/"],
+["Sathish Gopalaiah","President","Deloitte","May 21, 2026","https://www.linkedin.com/in/sathish-gopalaiah-b167144/"],
+["Debasish Mishra","Chief Growth Officer","Deloitte","May 21, 2026","https://www.linkedin.com/in/debasish0710/"],
+["Anil Kumar","Head Of Product Management","McKinsey & Company","May 19, 2026","https://www.linkedin.com/in/ansaini/"],
+["Neeraj Kumar","Managing Director, Head of Corporate Banking, South Asia, Citibank","CITI","April 27, 2026","https://www.linkedin.com/in/neeraj-dogra-neeraj/"],
+["Ritesh Kapoor","Vice President, Marketing & Communications","Accenture","March 3, 2026","https://www.linkedin.com/in/ritesh-kapoor-choice-architect/"],
+["Abhishek Tiwari","Talent Acquisition @Visa","Visa","February 12, 2026","https://www.linkedin.com/in/abhishek-tiwari-223a8b7/"]
+];
+
+/* ============================================================
+   PART 1 — PLAIN DATA RENDERING (no chart library required)
+   This runs first and unconditionally, so post metrics, tables,
+   the funnel, ledger, chips and lists always appear even if the
+   Chart.js CDN script below fails to load (e.g. no network, or a
+   sandboxed preview that blocks third-party scripts).
+============================================================ */
+const TEAL = "#1F6F63", TEAL_L = "#4C9C8D", TEAL_XL="#9DC9C0", GOLD = "#B8892F", GOLD_L = "#D9BC7C", INK="#101828";
+
+/* Post table */
+const rateBadge = r => r>=7 ? 'badge' : (r<4 ? 'badge low' : 'badge gold');
+document.getElementById('postTableBody').innerHTML = posts.map(p=>`
+  <tr>
+    <td><b>Post ${p.id}</b>${p.tag ? `<div style="font-size:11px;color:var(--muted);margin-top:2px;">${p.tag}</div>`:''}</td>
+    <td>${p.impressions}</td>
+    <td>${p.likes}</td>
+    <td>${p.comments}</td>
+    <td><span class="${rateBadge(p.rate)}">${p.rate}%</span></td>
+  </tr>`).join('');
+
+/* Funnel (true sequential: sent -> matched) */
+const funnelData = [
+  {label:'Requests sent', value:1031, max:1031},
+  {label:'Confirmed matched', value:362, max:1031},
+];
+document.getElementById('funnelBox').innerHTML = funnelData.map(f=>`
+  <div class="funnel-step">
+    <div>${f.label}</div>
+    <div class="funnel-bar-bg"><div class="funnel-bar-fill" style="width:${(f.value/f.max*100).toFixed(1)}%"></div></div>
+    <div class="val">${f.value}</div>
+  </div>`).join('');
+
+/* Seniority mix of accepted connections */
+document.getElementById('seniorityBox').innerHTML = seniorityData.map(f=>`
+  <div class="funnel-step">
+    <div>${f.label}</div>
+    <div class="funnel-bar-bg"><div class="funnel-bar-fill" style="width:${(f.value/f.max*100).toFixed(1)}%"></div></div>
+    <div class="val">${f.value}</div>
+  </div>`).join('');
+
+/* Conversion leaders / laggards */
+const convRates = targetVsAccepted.map(o=>({name:o.name, rate: o.target ? (o.accepted/o.target*100) : 0}));
+const convSorted = [...convRates].sort((a,b)=>b.rate-a.rate);
+document.getElementById('convLeaders').innerHTML = convSorted.slice(0,4).map(c=>`<li>${c.name} <b>${Math.round(c.rate)}%</b></li>`).join('');
+document.getElementById('convLaggards').innerHTML = convSorted.slice(-4).reverse().map(c=>`<li>${c.name} <b>${Math.round(c.rate)}%</b></li>`).join('');
+
+/* Target chips */
+document.getElementById('targetChips').innerHTML = targetCompanies.map(c=>`<span class="chip">${c}</span>`).join('');
+
+/* Post people tabs */
+const postTabsEl = document.getElementById('postPeopleTabs');
+const postGridEl = document.getElementById('postPeopleGrid');
+function splitRole(role){
+  const parts = role.split('|').map(s=>s.trim()).filter(Boolean);
+  const first = parts[0] || role;
+  const extra = parts.length - 1;
+  return extra > 0 ? `${first} <span class="more">+${extra} more focus area${extra>1?'s':''}</span>` : first;
+}
+function renderPostPeople(id){
+  postTabsEl.querySelectorAll('button').forEach(b=>b.classList.toggle('active', +b.dataset.id===id));
+  postGridEl.innerHTML = postPeople[id].map(p=>`
+    <div class="person"><div class="name">${p[0]} <span style="font-weight:500;color:var(--muted);font-size:11px;">· ${p[2]}</span></div><div class="role">${splitRole(p[1])}</div></div>`).join('');
+}
+postTabsEl.innerHTML = Object.keys(postPeople).map((id,i)=>`<button data-id="${id}" class="${i===0?'active':''}">Post ${id}</button>`).join('');
+postTabsEl.querySelectorAll('button').forEach(b=> b.addEventListener('click', ()=>renderPostPeople(+b.dataset.id)) );
+renderPostPeople(13);
+
+/* Ledger table: [name, role, company, date, url] */
+const ledgerBody = document.getElementById('ledgerBody');
+const ledgerCount = document.getElementById('ledgerCount');
+let ledgerSort = {key:0, dir:1};
+function parseDate(d){ const t = Date.parse(d); return isNaN(t) ? 0 : t; }
+function renderLedger(filter=''){
+  const f = filter.trim().toLowerCase();
+  let rows = ledger.filter(r => !f || r.slice(0,4).join(' ').toLowerCase().includes(f));
+  const k = ledgerSort.key;
+  rows = [...rows].sort((a,b)=>{
+    let av = k===3 ? parseDate(a[3]) : a[k];
+    let bv = k===3 ? parseDate(b[3]) : b[k];
+    if(typeof av === 'string'){ av = av.toLowerCase(); bv = bv.toLowerCase(); }
+    return av < bv ? -1*ledgerSort.dir : av > bv ? 1*ledgerSort.dir : 0;
+  });
+  ledgerBody.innerHTML = rows.map(r=>`
+    <tr><td><b>${r[0]}</b></td><td>${r[1]||'—'}</td><td>${r[2]||'—'}</td><td>${r[3]||'—'}</td>
+    <td>${r[4] ? `<a class="plink" href="${r[4]}" target="_blank" rel="noopener">View ↗</a>` : '—'}</td></tr>`).join('')
+    || `<tr><td colspan="5" style="color:var(--muted);text-align:center;padding:24px;">No matches</td></tr>`;
+  ledgerCount.textContent = `Showing ${rows.length} of ${ledger.length} verified connections`;
+}
+document.getElementById('ledgerSearch').addEventListener('input', e=>renderLedger(e.target.value));
+document.querySelectorAll('.table-scroll thead th[data-key]').forEach(th=>{
+  th.addEventListener('click', ()=>{
+    const key = +th.dataset.key;
+    if(key < 0) return;
+    if(ledgerSort.key === key){ ledgerSort.dir *= -1; } else { ledgerSort = {key, dir:1}; }
+    document.querySelectorAll('.table-scroll thead th .arrow').forEach(a=>a.textContent='');
+    th.querySelector('.arrow').textContent = ledgerSort.dir===1 ? '▾' : '▴';
+    renderLedger(document.getElementById('ledgerSearch').value);
+  });
+});
+renderLedger();
+
+/* ============================================================
+   PART 2 — CHARTS (requires the Chart.js library from the CDN)
+   Each chart is wrapped so a single failure never blocks another,
+   and a plain-text fallback appears in place of any chart that
+   can't render instead of leaving a blank box.
+============================================================ */
+function chartsAvailable(){ return typeof Chart !== 'undefined'; }
+function chartFallback(canvasId, message){
+  const el = document.getElementById(canvasId);
+  if(!el) return;
+  const box = el.closest('.chart-box') || el.parentElement;
+  box.innerHTML = `<div style="height:100%;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-size:12.5px;padding:12px;border:1px dashed var(--line);border-radius:6px;">${message}</div>`;
+}
+function safeChart(canvasId, build){
+  try{
+    if(!chartsAvailable()) throw new Error('Chart.js did not load');
+    return build();
+  }catch(e){
+    console.warn('Chart failed:', canvasId, e);
+    chartFallback(canvasId, 'Chart could not load after trying three CDNs — probably a blocked connection. The figures are in the table above.');
+    return null;
+  }
+}
+
+/* All chart-building runs here, only once the loader in <head> has
+   either succeeded or exhausted every CDN it tried. */
+function initCharts(){
+
+if(chartsAvailable()){
+  Chart.defaults.font.family = "'Inter', sans-serif";
+  Chart.defaults.color = "#6B7280";
+  Chart.defaults.font.size = 12;
+}
+
+/* Content performance combo chart */
+safeChart('chartContent', ()=> new Chart(document.getElementById('chartContent'), {
+  data:{
+    labels: posts.map(p=>'Post '+p.id),
+    datasets:[
+      { type:'bar', label:'Impressions', data:posts.map(p=>p.impressions), backgroundColor:TEAL_XL, borderRadius:4, yAxisID:'y', order:2, barPercentage:0.55 },
+      { type:'line', label:'Engagement rate %', data:posts.map(p=>p.rate), borderColor:GOLD, backgroundColor:GOLD, tension:0.35, yAxisID:'y1', order:1, pointRadius:5, pointBackgroundColor:GOLD, borderWidth:2.5 },
+    ]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    interaction:{ mode:'index', intersect:false },
+    plugins:{ legend:{ position:'top', align:'end', labels:{ boxWidth:10, usePointStyle:true } } },
+    scales:{
+      y:{ beginAtZero:true, position:'left', grid:{ color:'#EEE9DC' }, title:{display:true, text:'Impressions'} },
+      y1:{ beginAtZero:true, position:'right', grid:{ display:false }, title:{display:true, text:'Engagement rate %'}, max:10 },
+      x:{ grid:{ display:false } }
+    }
+  }
+}));
+
+/* Top orgs chart */
+safeChart('chartOrgs', ()=> new Chart(document.getElementById('chartOrgs'), {
+  type:'bar',
+  data:{
+    labels: topOrgs.map(o=>o.name),
+    datasets:[{ data: topOrgs.map(o=>o.count), backgroundColor: TEAL, borderRadius:3, barThickness:14 }]
+  },
+  options:{
+    indexAxis:'y', responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false}, tooltip:{callbacks:{label:c=>c.raw+' confirmed connections'}} },
+    scales:{ x:{ grid:{ color:'#EEE9DC' } }, y:{ grid:{display:false} } }
+  }
+}));
+
+/* Segment chart */
+safeChart('chartSegment', ()=> new Chart(document.getElementById('chartSegment'), {
+  type:'bar',
+  data:{
+    labels: segmentCoverage.map(s=>s.name),
+    datasets:[{ data: segmentCoverage.map(s=>s.count), backgroundColor: TEAL, borderRadius:3, barThickness:16 }]
+  },
+  options:{
+    indexAxis:'y', responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false} },
+    scales:{ x:{ grid:{ color:'#EEE9DC' } }, y:{ grid:{display:false} } }
+  }
+}));
+
+/* Target vs Accepted grouped chart */
+safeChart('chartTargetVsAccepted', ()=> new Chart(document.getElementById('chartTargetVsAccepted'), {
+  type:'bar',
+  data:{
+    labels: targetVsAccepted.map(o=>o.name),
+    datasets:[
+      { label:'Targeted', data: targetVsAccepted.map(o=>o.target), backgroundColor: GOLD_L, borderRadius:3, barThickness:9 },
+      { label:'Accepted', data: targetVsAccepted.map(o=>o.accepted), backgroundColor: TEAL, borderRadius:3, barThickness:9 },
+    ]
+  },
+  options:{
+    indexAxis:'y', responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{ position:'top', align:'end', labels:{ boxWidth:10, usePointStyle:true } } },
+    scales:{ x:{ grid:{ color:'#EEE9DC' } }, y:{ grid:{display:false} } }
+  }
+}));
+
+} /* end initCharts */
+
+if (chartsAvailable()) { initCharts(); }
+else { window.addEventListener('chartjs-ready', initCharts, {once:true}); }
+
+/* Scroll spy */
+const navLinks = [...document.querySelectorAll('.rail-nav a')];
+const sections = navLinks.map(a=>document.querySelector(a.getAttribute('href')));
+const spy = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const id = '#'+entry.target.id;
+      navLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href')===id));
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+sections.forEach(s=> s && spy.observe(s));
+</script>
+</body>
+</html>
